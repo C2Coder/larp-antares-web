@@ -1,22 +1,88 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #3b82f6;
-  --color-primary-dark: #2563eb;
-  --color-accent: #f59e0b;
-  --color-background-light: #ffffff;
-  --color-background-dark: #f1f5f9;
-  --color-header: #ffffff;
-  --color-text: #1e293b;
-  --color-text-muted: #64748b;
-  --color-border: #e2e8f0;
+  --color-header: #413D35;
+  --color-header-text: #CECAC0;
+  
+  --color-primary: #FFDD86;
+  --color-primary-dark:   #FFDE59;
+  --color-primary-accent: #665B4E;
+
+  --color-button-primary: #B39D54;
+  --color-button-primary-hover: #665B4E;
+  --color-button-text: #E7E5E0;
+  
+  --color-background-light: #E7E5E0;
+  --color-background-dark: #CECAC0;
+
+  --color-text: #413D35;
+  --color-text-muted: #665B4E;
+
+  --color-text-light: #E7E5E0;
+  --color-text-light-muted: #CECAC0;
+
+  --color-border: #A5A197;
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 5rem; /* offset for fixed 4rem (h-16) header + breathing room */
 }
 
 body {
   background-color: var(--color-background-light);
   color: var(--color-text);
+  overflow-x: hidden;
+}
+
+.fc {
+  font-family: 'Inknut Antiqua', serif;
+  /* font-family: "IM Fell English SC", serif;*/
+}
+
+.gallery-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.01);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item img {
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.03);
+}
+
+.hero-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 24rem;
+  margin: 0 auto;
+}
+
+.hero-divider-line {
+  flex: 1;
+  height: 1px;
+  background-color: var(--color-border);
+}
+
+.hero-divider-diamond {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: var(--color-border);
+  transform: rotate(45deg);
+}
+
+.hero-divider-diamond-lg {
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: var(--color-button-primary);
+  transform: rotate(45deg);
 }
