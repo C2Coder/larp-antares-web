@@ -23,16 +23,16 @@ export function createNav(activePage) {
   }).join('\n          ');
 
   return `
-  <header class="fixed top-0 left-0 right-0 z-50 bg-header/95 backdrop-blur shadow-sm">
+  <header class="fixed top-0 left-0 right-0 z-50 bg-header/95 backdrop-blur shadow-sm overflow-visible">
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
 
         <!-- Logo -->
-        <a href="/" class="flex items-center gap-3">
-          <div class="flex items-center gap-3">
-            <img src="/assets/logos/logo-nbg-dark.png" alt="Logo" class="h-8 w-8" onerror="this.style.display='none'">
-            <span class="text-xl font-bold fc text-primary-dark">Antares</span>
+        <a href="/" class="relative flex items-center" style="height:64px; padding-left:clamp(80px, 10vw, 108px);">
+          <div class="logo-pennant">
+            <img src="/assets/logos/logo-nbg.png" alt="Logo" class="h-20 w-20 md:h-24 md:w-24 object-contain" onerror="this.style.display='none'">
           </div>
+          <span class="ml-2 text-xl md:text-2xl font-bold fc text-primary-dark">Antares</span>
         </a>
 
         <!-- Desktop links -->
@@ -64,7 +64,7 @@ export function createNav(activePage) {
 
     <!-- Mobile menu dropdown -->
     <div id="mobile-menu" class="hidden md:hidden bg-header/98 backdrop-blur border-t border-header-text/20">
-      <div class="max-w-7xl mx-auto px-4 py-3 flex flex-col gap-1">
+      <div class="max-w-7xl mx-auto px-4 pt-10 pb-3 flex flex-col gap-1">
         ${mobileLinks}
       </div>
     </div>
