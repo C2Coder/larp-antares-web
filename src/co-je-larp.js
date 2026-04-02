@@ -104,7 +104,7 @@ document.querySelector("#app").innerHTML = `
           </p>
         </div>
         </div>
-        <div class="grid grid-cols-5 max-w-5xl xl:flex-row gap-4 mx-auto p-4 sm:px-6"> 
+        <div class="grid grid-cols-1 sm:grid-cols-5 max-w-5xl xl:flex-row gap-4 mx-auto p-4 sm:px-6"> 
           <div class="col-span-3 bg-background-light rounded-2xl border border-border p-6 md:p-8">
             <div class="flex items-center gap-3 mb-5">
               <div class="w-8 h-8 bg-primary/30 rounded-lg flex items-center justify-center shrink-0">

@@ -1,9 +1,33 @@
 import { defineConfig } from 'vite'
 import tailwindcss from '@tailwindcss/vite'
 import { resolve } from 'path'
+import { copyFileSync, mkdirSync, readdirSync, statSync } from 'fs'
+import { join } from 'path'
 
 export default defineConfig({
-  plugins: [tailwindcss()],
+  plugins: [
+    tailwindcss(),
+    {
+      name: 'copy-assets',
+      closeBundle() {
+        const copyDir = (src, dest) => {
+          mkdirSync(dest, { recursive: true })
+          const entries = readdirSync(src)
+          for (const entry of entries) {
+            const srcPath = join(src, entry)
+            const destPath = join(dest, entry)
+            if (statSync(srcPath).isDirectory()) {
+              copyDir(srcPath, destPath)
+            } else {
+              copyFileSync(srcPath, destPath)
+            }
+          }
+        }
+        copyDir('assets', 'dist/assets')
+        copyFileSync('CNAME', 'dist/CNAME')
+      }
+    }
+  ],
   server: {
     host: true,
     allowedHosts: ['antares.c2coder.eu', 'ntb', 'localhost']
