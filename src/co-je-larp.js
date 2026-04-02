@@ -3,10 +3,19 @@ import { createNav, initNav } from "./nav.js";
 import { createFooter } from "./footer.js";
 import { createLightbox, initLightbox } from "./lightbox.js";
 
-const bojImages = [
-  { src: "/assets/home/1.jpg", alt: "Larpový boj - foto 1" },
-  { src: "/assets/home/2.jpg", alt: "Larpový boj - foto 2" },
+const coJeLarpImages = [
+  { src: "/assets/co-je-larp/1.jpg", alt: "LARP hraní rolí - foto 1", aspect: "aspect-[3/2]" },
+  { src: "/assets/co-je-larp/2.jpg", alt: "LARP hraní rolí - foto 2", aspect: "aspect-[3/2]" },
+  { src: "/assets/co-je-larp/3.jpg", alt: "LARP hraní rolí - foto 3", aspect: "aspect-[3/2]" },
+  { src: "/assets/co-je-larp/4.jpg", alt: "LARPový boj - foto 1", aspect: "aspect-[3/2]" },
+  { src: "/assets/co-je-larp/5.jpg", alt: "LARPový boj - foto 2", aspect: "aspect-[9/16]" },
+  { src: "/assets/co-je-larp/6.jpg", alt: "LARPový boj - foto 3", aspect: "aspect-[3/2]" },
 ];
+
+const larpIntroImages = coJeLarpImages.slice(0, 2);
+const exampleImage = coJeLarpImages[2];
+const bojImages = coJeLarpImages.slice(-3);
+
 
 document.querySelector("#app").innerHTML = `
   ${createNav('co-je-larp')}
@@ -58,7 +67,16 @@ document.querySelector("#app").innerHTML = `
               je to dobrodružné skloubení hry, divadla, fantazie a improvizace.
             </p>
           </div>
-        </div>
+
+          </div>
+          <!-- LARP photos -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full mt-8">
+            ${larpIntroImages.map((img, i) => `
+              <div class="gallery-item ${img.aspect} bg-background-dark rounded-xl flex items-center justify-center cursor-pointer overflow-hidden" data-index="${i}">
+                <img src="${img.src}" alt="${img.alt}" class="w-full h-full object-cover rounded-xl" onerror="this.parentElement.innerHTML='<span class=\\'text-text-muted text-sm p-2 text-center\\'>${img.alt}</span>'">
+              </div>
+            `).join("")}
+          </div>
       </div>
     </section>
 
@@ -75,6 +93,11 @@ document.querySelector("#app").innerHTML = `
             <div class="hero-divider-line"></div>
           </div>
         </div>
+
+          
+        <div class="gallery-item ${exampleImage.aspect || 'aspect-video'} bg-background-dark rounded-xl flex items-center justify-center cursor-pointer overflow-hidden" data-index="${2}">
+              <img src="${exampleImage.src}" alt="${exampleImage.alt}" class="w-full h-full object-cover rounded-xl" onerror="this.parentElement.innerHTML='<span class=\\'text-text-muted text-sm p-2 text-center\\'>${exampleImage.alt}</span>'">
+            </div>
 
         <div class="flex flex-col gap-5 text-lg text-text-muted leading-relaxed mb-10">
           <p>
@@ -115,7 +138,7 @@ document.querySelector("#app").innerHTML = `
       </div>
     </section>
 
-    <!-- Larpový boj -->
+    <!-- LARPový boj -->
     <section class="py-16 bg-background-light">
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-10">
@@ -144,11 +167,19 @@ document.querySelector("#app").innerHTML = `
 
         <!-- Fight photos -->
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          ${bojImages.map((img, i) => `
-            <div class="gallery-item aspect-video bg-background-dark rounded-xl flex items-center justify-center cursor-pointer overflow-hidden" data-index="${i}">
-              <img src="${img.src}" alt="${img.alt}" class="w-full h-full object-cover rounded-xl" onerror="this.parentElement.innerHTML='<span class=\\'text-text-muted text-sm p-2 text-center\\'>${img.alt}</span>'">
+          <div class="flex flex-col gap-4">
+            <div class="gallery-item aspect-[3/2] bg-background-dark rounded-xl flex items-center justify-center cursor-pointer overflow-hidden" data-index="${larpIntroImages.length + 1}">
+              <img src="${bojImages[0].src}" alt="${bojImages[0].alt}" class="w-full h-full object-cover rounded-xl" onerror="this.parentElement.innerHTML='<span class=\\'text-text-muted text-sm p-2 text-center\\'>${bojImages[0].alt}</span>'">
             </div>
-          `).join("")}
+            <div class="gallery-item aspect-[3/2] bg-background-dark rounded-xl flex items-center justify-center cursor-pointer overflow-hidden" data-index="${larpIntroImages.length + 3}">
+              <img src="${bojImages[2].src}" alt="${bojImages[2].alt}" class="w-full h-full object-cover rounded-xl" onerror="this.parentElement.innerHTML='<span class=\\'text-text-muted text-sm p-2 text-center\\'>${bojImages[2].alt}</span>'">
+            </div>
+          </div>
+          <div class="gallery-item aspect-[2/3] bg-background-dark rounded-xl flex items-center justify-center cursor-pointer overflow-hidden" data-index="${larpIntroImages.length + 2}">
+            <img src="${bojImages[1].src}" alt="${bojImages[1].alt}" class="w-full h-full object-cover rounded-xl" onerror="this.parentElement.innerHTML='<span class=\\'text-text-muted text-sm p-2 text-center\\'>${bojImages[1].alt}</span>'">
+          </div>
+        </div>
+    
         </div>
       </div>
     </section>
@@ -188,4 +219,4 @@ document.querySelector("#app").innerHTML = `
 `;
 
 initNav();
-initLightbox(bojImages);
+initLightbox([...coJeLarpImages]);

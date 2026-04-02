@@ -6,9 +6,9 @@
 export function createNav(activePage) {
   const links = [
     { id: 'uvod',         href: '/',              label: 'Úvod' },
-    { id: 'co-je-larp',   href: '/co-je-larp',    label: 'Co je Larp' },
+    { id: 'co-je-larp',   href: '/co-je-larp',    label: 'Co je LARP' },
     { id: 'tento-rocnik', href: '/tento-rocnik',   label: 'Tento ročník' },
-    { id: 'jak-na-larp',  href: '/jak-na-larp',    label: 'Hra' },
+    { id: 'jak-na-larp',  href: '/jak-na-larp',    label: 'Jak na LARP' },
     { id: 'o-nas',        href: '/o-nas',          label: 'Kontakty' },
   ];
 
@@ -32,7 +32,7 @@ export function createNav(activePage) {
           <div class="logo-pennant">
             <img src="/assets/logos/logo-nbg.png" alt="Logo" class="h-20 w-20 md:h-24 md:w-24 object-contain" onerror="this.style.display='none'">
           </div>
-          <span class="ml-2 text-xl md:text-2xl font-bold fc text-primary-dark">Antares</span>
+          <span class="ml-2 text-xl md:text-2xl font-bold fc text-header-text">LARP Antares</span>
         </a>
 
         <!-- Desktop links -->

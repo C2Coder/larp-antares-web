@@ -4,11 +4,10 @@ import { createFooter } from "./footer.js";
 import { createLightbox, initLightbox } from "./lightbox.js";
 
 const campImages = [
-  { src: "/assets/home/0.jpg", alt: "Tábor Antares - foto 0", span:"md:col-span-2" },
-  { src: "/assets/home/1.jpg", alt: "Tábor Antares - foto 1", span:"md:col-span-2" },
-  { src: "/assets/home/2.jpg", alt: "Tábor Antares - foto 2", span:"md:col-span-2" },
-  { src: "/assets/home/3.jpg", alt: "Tábor Antares - foto 3", span:"md:col-span-3" },
-  { src: "/assets/home/4.jpg", alt: "Tábor Antares - foto 4", span:"md:col-span-3" },
+  { src: "/assets/this-year/1.jpg", alt: "Tábor Antares - foto 1", span:"md:col-span-3" },
+  { src: "/assets/this-year/2.jpg", alt: "Tábor Antares - foto 2", span:"md:col-span-3" },
+  { src: "/assets/this-year/3.jpg", alt: "Tábor Antares - foto 3", span:"md:col-span-3" },
+  { src: "/assets/this-year/4.jpg", alt: "Tábor Antares - foto 4", span:"md:col-span-3" },
 ];
 
 const mapLat = 50.4021514;
@@ -22,7 +21,7 @@ document.querySelector("#app").innerHTML = `
     <!-- Page header -->
     <section class="py-16 bg-background-dark text-center">
       <div class="flex flex-col max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p class="fc text-sm sm:text-base text-text-muted tracking-widest uppercase mb-3">11. ročník</p>
+        <p class="fc text-sm sm:text-base text-text-muted tracking-widest uppercase mb-3">XI. ročník</p>
         <h1 class="fc text-4xl sm:text-5xl lg:text-6xl font-bold text-text mb-6">Tento ročník</h1>
         <div class="hero-divider pb-6">
           <div class="hero-divider-line"></div>
@@ -134,7 +133,7 @@ document.querySelector("#app").innerHTML = `
                 <div>
                   <h3 class="font-bold text-lg text-text mb-1">Posudek zdravotní způsobilosti</h3>
                   <p class="text-text-muted leading-relaxed">
-                    Vyžadován pro účastníky mladší 15 let (postačí kopie).
+                    Vyžadován pro účastníky mladší 18 let (postačí kopie).
                     Prosíme o zaslání dokumentu předem - <strong class="text-text">nejpozději do konce července</strong>.
                   </p>
                 </div>
@@ -148,7 +147,7 @@ document.querySelector("#app").innerHTML = `
                 <div>
                   <h3 class="font-bold text-lg text-text mb-1">Bezinfekčnost</h3>
                   <p class="text-text-muted leading-relaxed">
-                    Vyplňuje zákonný zástupce <strong class="text-text">před odjezdem</strong> na tábor.
+                    Vyplňuje zákonný zástupce <strong class="text-text">ve dne odjezdu</strong> na tábor.
                   </p>
                 </div>
               </div>
@@ -191,7 +190,7 @@ document.querySelector("#app").innerHTML = `
                 <div>
                   <h3 class="font-bold text-lg text-text mb-1">Kostým a měkčené zbraně</h3>
                   <p class="text-text-muted leading-relaxed">
-                    Nezbytná součást pro hru, více v <a href="/jak-na-larp#kostym" class="font-semibold text-button-primary hover:underline">ZDE</a>
+                    Nezbytná součást pro hru, více najdete <a href="/jak-na-larp#kostym" class="font-semibold text-button-primary hover:underline">ZDE</a>
                   </p>
                 </div>
               </div>

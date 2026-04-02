@@ -7,7 +7,6 @@ const homeImages = [
   { src: "/assets/home/1.jpg", alt: "Tábor Antares 1" },
   { src: "/assets/home/2.jpg", alt: "Tábor Antares 2" },
   { src: "/assets/home/3.jpg", alt: "Tábor Antares 3" },
-  { src: "/assets/home/4.jpg", alt: "Tábor Antares 4" },
 ];
 
 document.querySelector("#app").innerHTML = `
@@ -47,7 +46,7 @@ document.querySelector("#app").innerHTML = `
         
         <div class="mt-12 gap-4 flex flex-col sm:flex-row justify-center"> 
           <a href="/tento-rocnik" class="px-10 py-4  bg-button-primary/80 text-button-text rounded-lg hover:bg-button-primary-hover/80 transition-colors font-semibold text-lg fc">
-            Více informací
+            Tento ročník
           </a>
           <a href="https://www.duha2d.cz/t%C3%A1bory/larp" class="px-10 py-4  bg-button-primary/80 text-button-text rounded-lg hover:bg-button-primary-hover/80 transition-colors font-semibold text-lg fc">
             Registrace
@@ -111,8 +110,8 @@ document.querySelector("#app").innerHTML = `
           O nás
         </h2>
         <div class=" flex flex-col gap-4 max-w-4xl mx-auto mb-12">
-          <p class="text-lg text-text-muted text-center">LARP Antares není klasický letní tábor. Je to týdenní akce, kde se účastníci stávají součástí živého fantasy příběhu – oblékají kostýmy a na týden se stávají rytíři, čaroději, lučištníky či těmi, kteří raději řeší hádanky než boje. Čeká vás dobrodružství, hádanky i nácvik larpového šermu s měkčenými zbraněmi. Každý je součástí příběhu a svými rozhodnutími ovlivňuje jeho průběh – každý má své místo a roli. Ponořte se do originálního světa Antares, kde žijí elfové a draci a kde magie není jen pohádkou. </p>
-          <p class="text-lg text-text-muted text-center">Tábor pořádáme již více než 10 let – letos začínáme novou kapitolu, přidáte se?</p>
+          <p class="text-lg text-text-muted text-center">LARP Antares není klasický letní tábor. Je to týdenní akce, kde se účastníci stávají součástí živého <strong>fantasy příběhu</strong> – oblékají kostýmy a na týden se stávají <strong>rytíři, čaroději, lučištníky </strong> či těmi, kteří raději řeší hádanky než boje. Čeká vás <strong>dobrodružství, hádanky</strong> i nácvik <strong>larpového šermu</strong> s měkčenými zbraněmi. Každý je součástí příběhu a svými rozhodnutími ovlivňuje jeho průběh – každý má své místo a roli. Ponořte se do originálního světa Antares, kde žijí elfové a draci a <strong>kde magie není jen pohádkou</strong>. </p>
+          <p class="text-lg text-text-muted text-center">Tábor pořádáme již více než <strong>10 let</strong> – letos začínáme novou kapitolu, <strong>přidáte se?</strong> </p>
         </div>
         <div class="flex w-full hero-divider bg-background-dark">
           <div class="hero-divider-line"></div>
@@ -124,11 +123,11 @@ document.querySelector("#app").innerHTML = `
 
         <div class="text-center mt-16">
           <a href="/tento-rocnik" class="px-8 py-3 bg-button-primary text-button-text rounded-lg hover:bg-button-primary-hover transition-colors font-semibold text-lg fc">
-            Zjistit více
+            Tento ročník
           </a>
         </div>
 
-        <div class="mt-12 grid sm:grid-cols-4 gap-6">
+        <div class="mt-12 grid sm:grid-cols-3 gap-6">
           ${homeImages.map((img, i) => `
             <div class="gallery-item aspect-[16/9] bg-linear-to-br from-primary/20 to-accent/20 rounded-xl flex items-center justify-center cursor-pointer overflow-hidden" data-index="${i}">
               <img src="${img.src}" alt="${img.alt}" class="w-full h-full object-cover rounded-xl" onerror="this.parentElement.innerHTML='<span class=\\'text-text-muted\\'>${img.alt}</span>'">
