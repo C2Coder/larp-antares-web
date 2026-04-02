@@ -25,6 +25,8 @@ export default defineConfig({
         }
         copyDir('assets', 'dist/assets')
         copyFileSync('CNAME', 'dist/CNAME')
+        copyFileSync('sitemap.xml', 'dist/sitemap.xml')
+        copyFileSync('robots.txt', 'dist/robots.txt')
       }
     }
   ],
