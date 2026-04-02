@@ -57,7 +57,7 @@ document.querySelector("#app").innerHTML = `
             <p>
               Táborová základna Sebuč je umístěna na klidné louce s blízkým lesem, mezi obcemi
               <strong class="text-text">Chvalkovice</strong> a <strong class="text-text">Dolany</strong>.
-              Vedle tábořiště protéká potok Beluňka s možností koupání.
+              Vedle tábořiště protéká potok Běluňka s možností koupání.
             </p>
             <p>
               Součástí tábořiště je také pevná budova s kuchyní a jídelnou a samostatná koupelna se sprchami.
@@ -147,7 +147,7 @@ document.querySelector("#app").innerHTML = `
                 <div>
                   <h3 class="font-bold text-lg text-text mb-1">Bezinfekčnost</h3>
                   <p class="text-text-muted leading-relaxed">
-                    Vyplňuje zákonný zástupce <strong class="text-text">ve dne odjezdu</strong> na tábor.
+                    Vyplňuje zákonný zástupce <strong class="text-text">v den odjezdu</strong> na tábor.
                   </p>
                 </div>
               </div>
