@@ -61,7 +61,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: var(--color-background-light);
+  background-color: white;
   width: 72px;
   height: 100px;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 78%, 0 100%);
@@ -69,7 +69,6 @@ body {
   align-items: center;
   justify-content: center;
   padding-bottom: 16px;
-  box-shadow: 2px 2px 8px rgba(0,0,0,0.18);
   z-index: 10;
 }
 

@@ -4,10 +4,10 @@ import { createFooter } from "./footer.js";
 import { createLightbox, initLightbox } from "./lightbox.js";
 
 const campImages = [
-  { src: "/assets/this-year/1.jpg", alt: "Tábor Antares - foto 1", span:"md:col-span-3" },
-  { src: "/assets/this-year/2.jpg", alt: "Tábor Antares - foto 2", span:"md:col-span-3" },
-  { src: "/assets/this-year/3.jpg", alt: "Tábor Antares - foto 3", span:"md:col-span-3" },
-  { src: "/assets/this-year/4.jpg", alt: "Tábor Antares - foto 4", span:"md:col-span-3" },
+  { src: "/assets/tento-rocnik/1.jpg", alt: "Tábor Antares - foto 1", span:"md:col-span-3" },
+  { src: "/assets/tento-rocnik/2.jpg", alt: "Tábor Antares - foto 2", span:"md:col-span-3" },
+  { src: "/assets/tento-rocnik/3.jpg", alt: "Tábor Antares - foto 3", span:"md:col-span-3" },
+  { src: "/assets/tento-rocnik/4.jpg", alt: "Tábor Antares - foto 4", span:"md:col-span-3" },
 ];
 
 const mapLat = 50.4021514;
@@ -52,7 +52,7 @@ document.querySelector("#app").innerHTML = `
           <div class="hero-divider-line"></div>
         </div>
 
-        <div class="flex flex-col md:flex-row justify-center">
+        <div class="flex flex-col xl:flex-row justify-center">
           <div class="max-w-4xl flex flex-col gap-4 text-lg text-text-muted leading-relaxed">
             <p>
               Táborová základna Sebuč je umístěna na klidné louce s blízkým lesem, mezi obcemi
@@ -85,7 +85,7 @@ document.querySelector("#app").innerHTML = `
             </span>
           </div>
 
-          <div class="flex-1 max-w-3xl mt-4 md:mt-0  px-4 sm:px-6 lg:px-8">
+          <div class="flex-1 max-w-4xl mt-4 md:mt-0  px-4 sm:px-6 lg:px-8">
             <div class="rounded-2xl overflow-hidden border border-border shadow-lg" style="height: 420px;">
               <iframe
                 src="https://frame.mapy.cz/turisticka?x=${mapLng}&y=${mapLat}&z=15&source=coor&id=${mapLng}%2C${mapLat}"
@@ -110,7 +110,7 @@ document.querySelector("#app").innerHTML = `
 
     <!-- What to bring -->
     <section class="py-16 bg-background-dark">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 class="fc font-bold text-3xl sm:text-4xl text-text mb-4">Co s sebou na tábor</h2>
         <div class="hero-divider mx-auto pt-2 pb-6">
           <div class="hero-divider-line"></div>

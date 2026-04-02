@@ -9,7 +9,7 @@ document.querySelector("#app").innerHTML = `
 
     <!-- Page header -->
     <section class="py-16 bg-background-dark text-center">
-      <div class="flex flex-col max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <p class="fc text-sm sm:text-base text-text-muted tracking-widest uppercase mb-3">LARP Antares</p>
         <h1 class="fc text-4xl sm:text-5xl lg:text-6xl font-bold text-text mb-6">Kontakty</h1>
         <div class="hero-divider pb-6">

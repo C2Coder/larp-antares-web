@@ -19,7 +19,7 @@ document.querySelector("#app").innerHTML = `
 
     <!-- Page header -->
     <section class="py-16 bg-background-dark text-center">
-      <div class="flex flex-col max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <p class="fc text-sm sm:text-base text-text-muted tracking-widest uppercase mb-3">Průvodce hráče</p>
         <h1 class="fc text-4xl sm:text-5xl lg:text-6xl font-bold text-text mb-6">Jak na LARP</h1>
         <div class="hero-divider pb-6">
@@ -49,15 +49,15 @@ document.querySelector("#app").innerHTML = `
             <div class="hero-divider-diamond"></div>
             <div class="hero-divider-line"></div>
           </div>
-          <p class="text-lg text-text-muted leading-relaxed max-w-3xl mx-auto">
+          <p class="text-lg text-text-muted leading-relaxed max-w-4xl mx-auto">
             Bez tematického kostýmu a larpové zbraně se žádný dobrodruh neobejde.
             Jak je sehnat, jak by měly vypadat a čeho se vyvarovat?
             (Nejen) pro nováčky jsme připravili manuály plné tipů a návodů.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          <a href="/assets/pdf/kostymovy-manual.pdf" target="_blank" rel="noopener"
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <a href="/assets/pdf/kostymy-a-zbrane-2026.pdf" target="_blank" rel="noopener"
              class="flex items-center gap-4 bg-background-dark rounded-xl p-5 border border-border hover:border-button-primary transition-colors group">
             <div class="w-12 h-12 bg-primary/30 rounded-lg flex items-center justify-center shrink-0 group-hover:bg-primary/50 transition-colors">
               <svg class="w-6 h-6 text-text" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -65,25 +65,12 @@ document.querySelector("#app").innerHTML = `
               </svg>
             </div>
             <div>
-              <p class="font-bold text-text fc">Kostýmový manuál</p>
-              <p class="text-sm text-text-muted">PDF – tipy na kostým</p>
+              <p class="font-bold text-text fc">Kostýmový a zbraňový manuál</p>
+              <p class="text-sm text-text-muted">PDF – tipy na kostýmy a zbraně</p>
             </div>
           </a>
 
-          <a href="/assets/pdf/zbranovy-manual.pdf" target="_blank" rel="noopener"
-             class="flex items-center gap-4 bg-background-dark rounded-xl p-5 border border-border hover:border-button-primary transition-colors group">
-            <div class="w-12 h-12 bg-primary/30 rounded-lg flex items-center justify-center shrink-0 group-hover:bg-primary/50 transition-colors">
-              <svg class="w-6 h-6 text-text" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
-              </svg>
-            </div>
-            <div>
-              <p class="font-bold text-text fc">Zbraňový manuál</p>
-              <p class="text-sm text-text-muted">PDF – co je povoleno</p>
-            </div>
-          </a>
-
-          <a href="/assets/pdf/navod-na-mec.pdf" target="_blank" rel="noopener"
+          <a href="/assets/pdf/navod-na-vyrobu-mece-Antares-2026.pdf" target="_blank" rel="noopener"
              class="flex items-center gap-4 bg-background-dark rounded-xl p-5 border border-border hover:border-button-primary transition-colors group">
             <div class="w-12 h-12 bg-primary/30 rounded-lg flex items-center justify-center shrink-0 group-hover:bg-primary/50 transition-colors">
               <svg class="w-6 h-6 text-text" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -113,7 +100,7 @@ document.querySelector("#app").innerHTML = `
           </div>
         </div>
 
-        <div class="flex flex-col gap-6 max-w-3xl mx-auto text-lg text-text-muted leading-relaxed mb-10">
+        <div class="flex flex-col gap-6 max-w-4xl px-4 sm:px-6 lg:px-8 mx-auto text-lg text-text-muted leading-relaxed mb-10">
           <p>
             Na táboře se účastníci stanou někým jiným – dobrodruhem, hrdinou či kýmkoliv, kým chtějí.
             Každá postava má své povolání, schopnosti i rasu (člověk, elf, trpaslík,&nbsp;…),
@@ -130,8 +117,8 @@ document.querySelector("#app").innerHTML = `
           </p>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto mb-10">
-          <a href="/assets/pdf/charakternik.pdf" target="_blank" rel="noopener"
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-5xl mx-auto mb-10">
+          <a href="/assets/doc/charakternik-k-vyplneni.docx" target="_blank" rel="noopener"
              class="flex items-center gap-4 bg-background-light rounded-xl p-5 border border-border hover:border-button-primary transition-colors group">
             <div class="w-12 h-12 bg-primary/30 rounded-lg flex items-center justify-center shrink-0 group-hover:bg-primary/50 transition-colors">
               <svg class="w-6 h-6 text-text" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -140,12 +127,25 @@ document.querySelector("#app").innerHTML = `
             </div>
             <div>
               <p class="font-bold text-text fc">Charakterník</p>
-              <p class="text-sm text-text-muted">PDF – formulář k vyplnění</p>
+              <p class="text-sm text-text-muted">DOCX – formulář k vyplnění</p>
             </div>
           </a>
-
+          <!-- Náhrada, dokud není PDF připraven #TODO -->
+          <div class="flex items-center gap-4 bg-background-light rounded-xl p-5 border border-border opacity-75 ">
+            <div class="w-12 h-12 bg-primary/30 rounded-lg flex items-center justify-center shrink-0">
+              <svg class="w-6 h-6 text-text" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+              </svg>
+            </div>
+            <div>
+              <p class="font-bold text-text fc">Ukázkový charakterník</p>
+              <p class="text-sm text-text-muted">Pracujeme na tom...</p>
+            </div>
+          </div>
+          <!-- Skryty - display:none, dokud není PDF připraven #TODO -->
           <a href="/assets/pdf/ukazkovy-charakternik.pdf" target="_blank" rel="noopener"
-             class="flex items-center gap-4 bg-background-light rounded-xl p-5 border border-border hover:border-button-primary transition-colors group">
+             class="flex items-center gap-4 bg-background-light rounded-xl p-5 border border-border hover:border-button-primary transition-colors group"
+             style="display: none;"> 
             <div class="w-12 h-12 bg-primary/30 rounded-lg flex items-center justify-center shrink-0 group-hover:bg-primary/50 transition-colors">
               <svg class="w-6 h-6 text-text" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
@@ -158,7 +158,7 @@ document.querySelector("#app").innerHTML = `
           </a>
         </div>
 
-        <div class="bg-background-light rounded-xl p-6 border border-border max-w-3xl mx-auto text-center">
+        <div class="bg-background-light rounded-xl p-6 border border-border max-w-5xl mx-auto text-center">
           <p class="text-text-muted leading-relaxed mb-2">
             Role posílejte na e-mail
             <a href="mailto:ja.napravnik@seznam.cz" class="font-semibold text-button-primary hover:underline">ja.napravnik@seznam.cz</a>
@@ -254,15 +254,15 @@ document.querySelector("#app").innerHTML = `
             Více fotek na Facebooku
           </a>
         </div>
-
+<!--
         <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-10">
           ${galleryImages.map((img, i) => `
-            <div class="gallery-item aspect-[4/3] bg-background-dark rounded-xl flex items-center justify-center cursor-pointer overflow-hidden" data-index="${i}">
+            <div class="gallery-item aspect-4/3 bg-background-dark rounded-xl flex items-center justify-center cursor-pointer overflow-hidden" data-index="${i}">
               <img src="${img.src}" alt="${img.alt}" class="w-full h-full object-cover rounded-xl" onerror="this.parentElement.innerHTML='<span class=\\'text-text-muted text-sm p-2 text-center\\'>${img.alt}</span>'">
             </div>
           `).join("")}
         </div>
-
+--!>
         <div class="text-center">
           <p class="text-text-muted leading-relaxed mb-2">
             Stále si nejste jistí? Neváhejte se na nás obrátit – rádi poradíme.

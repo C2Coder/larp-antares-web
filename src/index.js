@@ -129,7 +129,7 @@ document.querySelector("#app").innerHTML = `
 
         <div class="mt-12 grid sm:grid-cols-3 gap-6">
           ${homeImages.map((img, i) => `
-            <div class="gallery-item aspect-[16/9] bg-linear-to-br from-primary/20 to-accent/20 rounded-xl flex items-center justify-center cursor-pointer overflow-hidden" data-index="${i}">
+            <div class="gallery-item aspect-3/2 bg-linear-to-br from-primary/20 to-accent/20 rounded-xl flex items-center justify-center cursor-pointer overflow-hidden" data-index="${i}">
               <img src="${img.src}" alt="${img.alt}" class="w-full h-full object-cover rounded-xl" onerror="this.parentElement.innerHTML='<span class=\\'text-text-muted\\'>${img.alt}</span>'">
             </div>
           `).join('')}

@@ -14,7 +14,7 @@ export function createNav(activePage) {
 
   const desktopLinks = links.map(({ id, href, label }) => {
     const active = id === activePage ? 'border-b-2 border-primary-dark' : '';
-    return `<a href="${href}" class="text-header-text hover:text-primary-dark fc font-semibold transition-colors ${active}">${label}</a>`;
+    return `<a href="${href}" class="text-header-text hover:text-primary-dark text-sm xl:text-base fc font-semibold transition-colors ${active}">${label}</a>`;
   }).join('\n          ');
 
   const mobileLinks = links.map(({ id, href, label }) => {
@@ -32,7 +32,8 @@ export function createNav(activePage) {
           <div class="logo-pennant">
             <img src="/assets/logos/logo-nbg.png" alt="Logo" class="h-20 w-20 md:h-24 md:w-24 object-contain" onerror="this.style.display='none'">
           </div>
-          <span class="ml-2 text-xl md:text-2xl font-bold fc text-header-text">LARP Antares</span>
+          <span class="hidden sm:grid ml-2 text-base xl:text-2xl font-bold fc text-header-text">LARP Antares</span>
+          <span class="sm:hidden ml-2 text-xl md:text-2xl font-bold fc text-header-text">Antares</span>
         </a>
 
         <!-- Desktop links -->
