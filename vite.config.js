@@ -32,7 +32,7 @@ export default defineConfig({
   ],
   server: {
     host: true,
-    allowedHosts: ['antares.c2coder.eu', 'ntb', 'localhost']
+    allowedHosts: ['larp-antares.cz', 'ntb', 'localhost']
   },
   build: {
     rollupOptions: {
