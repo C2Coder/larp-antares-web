@@ -249,9 +249,9 @@ document.querySelector("#app").innerHTML = `
         </div>
         <div class="grid grid-cols-1 md:grid-cols-6 gap-4 mb-4">
           ${campImages.map((img, i) => `
-            <div class="gallery-item aspect-video ${img.span} bg-background-light rounded-xl flex items-center justify-center cursor-pointer overflow-hidden" data-index="${i}">
-              <img src="${img.src}" alt="${img.alt}" class="w-full h-full object-cover rounded-xl" onerror="this.parentElement.innerHTML='<span class=\\'text-text-muted text-sm p-2 text-center\\'>${img.alt}</span>'">
-            </div>`,)
+            <button type="button" class="gallery-item aspect-video ${img.span} bg-background-light rounded-xl flex items-center justify-center cursor-pointer overflow-hidden" data-index="${i}" aria-label="Otevřít fotku ${i + 1}">
+              <img src="${img.src}" alt="${img.alt}" class="w-full h-full object-cover rounded-xl" loading="lazy" decoding="async" onerror="this.parentElement.innerHTML='<span class=\\'text-text-muted text-sm p-2 text-center\\'>${img.alt}</span>'">
+            </button>`,)
             .join("")}
         </div>
       </div>

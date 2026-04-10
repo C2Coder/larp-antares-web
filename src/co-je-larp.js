@@ -72,9 +72,9 @@ document.querySelector("#app").innerHTML = `
           <!-- LARP photos -->
           <div class="grid grid-cols-1 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 sm:grid-cols-2 gap-4 w-full mt-8">
             ${larpIntroImages.map((img, i) => `
-              <div class="gallery-item ${img.aspect} bg-background-dark rounded-xl flex items-center justify-center cursor-pointer overflow-hidden" data-index="${i}">
-                <img src="${img.src}" alt="${img.alt}" class="w-full h-full object-cover rounded-xl" onerror="this.parentElement.innerHTML='<span class=\\'text-text-muted text-sm p-2 text-center\\'>${img.alt}</span>'">
-              </div>
+              <button type="button" class="gallery-item ${img.aspect} bg-background-dark rounded-xl flex items-center justify-center cursor-pointer overflow-hidden" data-index="${i}" aria-label="Otevřít fotku ${i + 1}">
+                <img src="${img.src}" alt="${img.alt}" class="w-full h-full object-cover rounded-xl" loading="lazy" decoding="async" onerror="this.parentElement.innerHTML='<span class=\\'text-text-muted text-sm p-2 text-center\\'>${img.alt}</span>'">
+              </button>
             `).join("")}
           </div>
     </section>
@@ -117,7 +117,7 @@ document.querySelector("#app").innerHTML = `
             <div class="flex flex-col gap-3 text-text-muted leading-relaxed">
               <p>
                 Ve vesnici se ztratil člověk. Hráči se ho vydají hledat – stopy vedou do lesa.
-                V dáli uslyší hlasitý smích  a.
+                V dáli uslyší hlasitý smích a šustění v křoví.
               </p>
               <p>
                 Lovec – jeden z hráčů – se rozhodne to prozkoumat, proplíží se blíže a uvidí skupinu
@@ -130,9 +130,9 @@ document.querySelector("#app").innerHTML = `
             </div>
           </div>
               
-          <div class="col-span-2 gallery-item bg-background-dark rounded-xl flex items-center justify-center cursor-pointer overflow-hidden" data-index="${2}">
-            <img src="${exampleImage.src}" alt="${exampleImage.alt}" class="w-full h-full object-cover rounded-xl" onerror="this.parentElement.innerHTML='<span class=\\'text-text-muted text-sm p-2 text-center\\'>${exampleImage.alt}</span>'">
-          </div>
+          <button type="button" class="col-span-2 gallery-item bg-background-dark rounded-xl flex items-center justify-center cursor-pointer overflow-hidden" data-index="${2}" aria-label="Otevřít ukázkovou fotku">
+            <img src="${exampleImage.src}" alt="${exampleImage.alt}" class="w-full h-full object-cover rounded-xl" loading="lazy" decoding="async" onerror="this.parentElement.innerHTML='<span class=\\'text-text-muted text-sm p-2 text-center\\'>${exampleImage.alt}</span>'">
+          </button>
         </div>
       
     </section>
@@ -166,15 +166,15 @@ document.querySelector("#app").innerHTML = `
 
         <!-- Fight photos -->
         <div class="grid grid-cols-1 sm:grid-cols-2 grid-rows-3 sm:grid-rows-2 gap-4">
-          <div class="gallery-item  bg-background-dark rounded-xl items-center justify-center cursor-pointer overflow-hidden" data-index="${larpIntroImages.length + 1}">
-            <img src="${bojImages[0].src}" alt="${bojImages[0].alt}" class="w-full h-full aspect-3/2 object-cover rounded-xl" onerror="this.parentElement.innerHTML='<span class=\\'text-text-muted text-sm p-2 text-center\\'>${bojImages[0].alt}</span>'">
-          </div>
-          <div class="row-span-2 gallery-item bg-background-dark rounded-xl items-center justify-center cursor-pointer overflow-hidden" data-index="${larpIntroImages.length + 2}">
-            <img src="${bojImages[1].src}" alt="${bojImages[1].alt}" class="w-full h-full aspect-2/3 object-cover rounded-xl" onerror="this.parentElement.innerHTML='<span class=\\'text-text-muted text-sm p-2 text-center\\'>${bojImages[1].alt}</span>'">
-          </div>
-          <div class="gallery-item bg-background-dark rounded-xl items-center justify-center cursor-pointer overflow-hidden" data-index="${larpIntroImages.length + 3}">
-            <img src="${bojImages[2].src}" alt="${bojImages[2].alt}" class="w-full h-full aspect-3/2 object-cover rounded-xl" onerror="this.parentElement.innerHTML='<span class=\\'text-text-muted text-sm p-2 text-center\\'>${bojImages[2].alt}</span>'">
-          </div>
+          <button type="button" class="gallery-item bg-background-dark rounded-xl items-center justify-center cursor-pointer overflow-hidden" data-index="${larpIntroImages.length + 1}" aria-label="Otevřít fotku boje 1">
+            <img src="${bojImages[0].src}" alt="${bojImages[0].alt}" class="w-full h-full aspect-3/2 object-cover rounded-xl" loading="lazy" decoding="async" onerror="this.parentElement.innerHTML='<span class=\\'text-text-muted text-sm p-2 text-center\\'>${bojImages[0].alt}</span>'">
+          </button>
+          <button type="button" class="row-span-2 gallery-item bg-background-dark rounded-xl items-center justify-center cursor-pointer overflow-hidden" data-index="${larpIntroImages.length + 2}" aria-label="Otevřít fotku boje 2">
+            <img src="${bojImages[1].src}" alt="${bojImages[1].alt}" class="w-full h-full aspect-2/3 object-cover rounded-xl" loading="lazy" decoding="async" onerror="this.parentElement.innerHTML='<span class=\\'text-text-muted text-sm p-2 text-center\\'>${bojImages[1].alt}</span>'">
+          </button>
+          <button type="button" class="gallery-item bg-background-dark rounded-xl items-center justify-center cursor-pointer overflow-hidden" data-index="${larpIntroImages.length + 3}" aria-label="Otevřít fotku boje 3">
+            <img src="${bojImages[2].src}" alt="${bojImages[2].alt}" class="w-full h-full aspect-3/2 object-cover rounded-xl" loading="lazy" decoding="async" onerror="this.parentElement.innerHTML='<span class=\\'text-text-muted text-sm p-2 text-center\\'>${bojImages[2].alt}</span>'">
+          </button>
         </div>
 
         </div>

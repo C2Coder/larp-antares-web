@@ -16,17 +16,17 @@
 
 export function createLightbox() {
   return `
-  <div id="lightbox" class="fixed inset-0 z-100 bg-black/95 hidden items-center justify-center">
-    <button id="lightbox-close" class="absolute top-4 right-4 p-2 text-white/70 hover:text-white transition-colors z-10">
+  <div id="lightbox" class="fixed inset-0 z-100 bg-black/95 hidden items-center justify-center" role="dialog" aria-modal="true" aria-label="Galerie obrázků">
+    <button id="lightbox-close" aria-label="Zavřít galerii" class="absolute top-4 right-4 p-2 text-white/70 hover:text-white transition-colors z-10">
       <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
     </button>
-    <button id="lightbox-prev" class="absolute left-4 top-1/2 -translate-y-1/2 p-2 text-white/70 hover:text-white transition-colors z-10">
+    <button id="lightbox-prev" aria-label="Předchozí obrázek" class="absolute left-4 top-1/2 -translate-y-1/2 p-2 text-white/70 hover:text-white transition-colors z-10">
       <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
     </button>
-    <button id="lightbox-next" class="absolute right-4 top-1/2 -translate-y-1/2 p-2 text-white/70 hover:text-white transition-colors z-10">
+    <button id="lightbox-next" aria-label="Další obrázek" class="absolute right-4 top-1/2 -translate-y-1/2 p-2 text-white/70 hover:text-white transition-colors z-10">
       <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
     </button>
-    <img id="lightbox-image" src="" alt="" class="max-w-[90vw] max-h-[90vh] object-contain">
+    <img id="lightbox-image" src="" alt="" class="max-w-[90vw] max-h-[90vh] object-contain" decoding="async">
   </div>
 `;
 }
@@ -42,11 +42,13 @@ export function initLightbox(images) {
     currentIndex = index;
     const lightbox = document.getElementById("lightbox");
     const img = document.getElementById("lightbox-image");
+    const closeButton = document.getElementById("lightbox-close");
     img.src = images[index].src;
     img.alt = images[index].alt;
     lightbox.classList.remove("hidden");
     lightbox.classList.add("flex");
     document.body.style.overflow = "hidden";
+    closeButton?.focus();
   }
 
   function closeLightbox() {
@@ -70,7 +72,7 @@ export function initLightbox(images) {
     }
     if (
       e.target.closest("#lightbox-close") ||
-      (e.target.id === "lightbox" && !e.target.closest("#lightbox-image"))
+      e.target.id === "lightbox"
     ) {
       closeLightbox();
     }

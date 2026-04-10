@@ -35,6 +35,23 @@ body {
   overflow-x: hidden;
 }
 
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a:focus-visible,
+button:focus-visible,
+[role="button"]:focus-visible {
+  outline: 3px solid var(--color-button-primary);
+  outline-offset: 3px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
 .fc {
   font-family: 'Inknut Antiqua', serif;
   /* font-family: "IM Fell English SC", serif;*/
@@ -44,9 +61,22 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+button.gallery-item {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  text-align: left;
+  appearance: none;
+}
+
 .gallery-item:hover {
   transform: scale(1.01);
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item:focus-visible {
+  transform: scale(1.01);
+  box-shadow: 0 0 0 3px var(--color-button-primary), 0 5px 20px rgba(0, 0, 0, 0.15);
 }
 
 .gallery-item img {

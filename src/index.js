@@ -15,7 +15,7 @@ document.querySelector("#app").innerHTML = `
   <main class="pt-16">
     <section id="hero" class="relative min-h-screen flex flex-col items-center justify-center">
       <div class="absolute inset-0 z-0">
-        <img src="/assets/home/home.jpg" alt="Antares tábor" class="w-full h-full object-cover" onerror="this.style.display='none'">
+        <img src="/assets/home/home.jpg" alt="Antares tábor" class="w-full h-full object-cover" fetchpriority="high" decoding="async" onerror="this.style.display='none'">
         <div class="absolute inset-0 bg-text/70"></div>
       </div>
       
@@ -48,7 +48,7 @@ document.querySelector("#app").innerHTML = `
           <a href="/tento-rocnik" class="px-10 py-4  bg-button-primary/80 text-button-text rounded-lg hover:bg-button-primary-hover/80 transition-colors font-semibold text-lg fc">
             Tento ročník
           </a>
-          <a href="https://www.duha2d.cz/t%C3%A1bory/larp" class="px-10 py-4  bg-button-primary/80 text-button-text rounded-lg hover:bg-button-primary-hover/80 transition-colors font-semibold text-lg fc">
+          <a href="https://www.duha2d.cz/t%C3%A1bory/larp" target="_blank" rel="noopener noreferrer" class="px-10 py-4  bg-button-primary/80 text-button-text rounded-lg hover:bg-button-primary-hover/80 transition-colors font-semibold text-lg fc">
             Registrace
           </a>
         </div>
@@ -129,9 +129,9 @@ document.querySelector("#app").innerHTML = `
 
         <div class="mt-12 grid sm:grid-cols-3 gap-6">
           ${homeImages.map((img, i) => `
-            <div class="gallery-item aspect-3/2 bg-linear-to-br from-primary/20 to-accent/20 rounded-xl flex items-center justify-center cursor-pointer overflow-hidden" data-index="${i}">
-              <img src="${img.src}" alt="${img.alt}" class="w-full h-full object-cover rounded-xl" onerror="this.parentElement.innerHTML='<span class=\\'text-text-muted\\'>${img.alt}</span>'">
-            </div>
+            <button type="button" class="gallery-item aspect-3/2 bg-linear-to-br from-primary/20 to-accent/20 rounded-xl flex items-center justify-center cursor-pointer overflow-hidden" data-index="${i}" aria-label="Otevřít fotku ${i + 1}">
+              <img src="${img.src}" alt="${img.alt}" class="w-full h-full object-cover rounded-xl" loading="lazy" decoding="async" onerror="this.parentElement.innerHTML='<span class=\\'text-text-muted\\'>${img.alt}</span>'">
+            </button>
           `).join('')}
         </div>
       </div>
