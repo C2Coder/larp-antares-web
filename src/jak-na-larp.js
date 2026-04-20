@@ -3,15 +3,6 @@ import { createNav, initNav } from "./nav.js";
 import { createFooter } from "./footer.js";
 import { createLightbox, initLightbox } from "./lightbox.js";
 
-const galleryImages = [
-  { src: "/assets/gallery/1.jpg", alt: "LARP Antares - foto 1" },
-  { src: "/assets/gallery/2.jpg", alt: "LARP Antares - foto 2" },
-  { src: "/assets/gallery/3.png", alt: "LARP Antares - foto 3" },
-  { src: "/assets/gallery/4.jpg", alt: "LARP Antares - foto 4" },
-  { src: "/assets/gallery/5.jpeg", alt: "LARP Antares - foto 5" },
-  { src: "/assets/gallery/6.png", alt: "LARP Antares - foto 6" },
-];
-
 document.querySelector("#app").innerHTML = `
   ${createNav('jak-na-larp')}
 

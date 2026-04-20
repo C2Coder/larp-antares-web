@@ -4,9 +4,9 @@ import { createFooter } from "./footer.js";
 import { createLightbox, initLightbox } from "./lightbox.js";
 
 const homeImages = [
-  { src: "/assets/home/1.jpg", alt: "Tábor Antares 1" },
-  { src: "/assets/home/2.jpg", alt: "Tábor Antares 2" },
-  { src: "/assets/home/3.jpg", alt: "Tábor Antares 3" },
+  { src: "/assets/home/1.webp", alt: "Tábor Antares 1" },
+  { src: "/assets/home/2.webp", alt: "Tábor Antares 2" },
+  { src: "/assets/home/3.webp", alt: "Tábor Antares 3" },
 ];
 
 document.querySelector("#app").innerHTML = `
@@ -15,7 +15,7 @@ document.querySelector("#app").innerHTML = `
   <main class="pt-16">
     <section id="hero" class="relative min-h-screen flex flex-col items-center justify-center">
       <div class="absolute inset-0 z-0">
-        <img src="/assets/home/home.jpg" alt="Antares tábor" class="w-full h-full object-cover" fetchpriority="high" decoding="async" onerror="this.style.display='none'">
+        <img src="/assets/home/home.webp" alt="Antares tábor" class="w-full h-full object-cover" fetchpriority="high" decoding="async" onerror="this.style.display='none'">
         <div class="absolute inset-0 bg-text/70"></div>
       </div>
       
@@ -33,7 +33,7 @@ document.querySelector("#app").innerHTML = `
         </h2>
         
         <p class="fc text-lg md:text-2xl text-text-light-muted max-w-xl mx-auto mb-10 italic">
-          Prožijte s námi tábor v podobě larpu, kde se fantasy stává skutečností.
+          Prožijte s námi pobytový tábor v podobě larpu, kde se fantasy stává skutečností.
         </p>
         
         <div class="hero-divider">
@@ -110,7 +110,7 @@ document.querySelector("#app").innerHTML = `
           O nás
         </h2>
         <div class=" flex flex-col gap-4 max-w-4xl mx-auto mb-12">
-          <p class="text-lg text-text-muted text-center">LARP Antares není klasický letní tábor. Je to týdenní akce, kde se účastníci stávají součástí živého <strong>fantasy příběhu</strong> – oblékají kostýmy a na týden se stávají <strong>rytíři, čaroději, lučištníky </strong> či těmi, kteří raději řeší hádanky než boje. Čeká vás <strong>dobrodružství, hádanky</strong> i nácvik <strong>larpového šermu</strong> s měkčenými zbraněmi. Každý je součástí příběhu a svými rozhodnutími ovlivňuje jeho průběh – každý má své místo a roli. Ponořte se do originálního světa Antares, kde žijí elfové a draci a <strong>kde magie není jen pohádkou</strong>. </p>
+          <p class="text-lg text-text-muted text-center">LARP Antares není klasický letní tábor. Je to pobytový tábor a týdenní akce, kde se účastníci stávají součástí <strong>fantasy příběhu</strong> – oblékají kostýmy a na týden se stávají <strong>rytíři, čaroději, lučištníky </strong> či těmi, kteří raději řeší hádanky než boje. Čeká vás <strong>dobrodružství, hádanky</strong> i nácvik <strong>larpového šermu</strong> s měkčenými zbraněmi. Každý je součástí příběhu a svými rozhodnutími ovlivňuje jeho průběh – každý má své místo a roli. Ponořte se do originálního světa Antares, kde žijí elfové a draci a <strong>kde magie není jen pohádkou</strong>. </p>
           <p class="text-lg text-text-muted text-center">Tábor pořádáme již více než <strong>10 let</strong> – letos začínáme novou kapitolu, <strong>přidáte se?</strong> </p>
         </div>
         <div class="flex w-full hero-divider bg-background-dark">

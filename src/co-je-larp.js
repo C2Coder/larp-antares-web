@@ -4,12 +4,12 @@ import { createFooter } from "./footer.js";
 import { createLightbox, initLightbox } from "./lightbox.js";
 
 const coJeLarpImages = [
-  { src: "/assets/co-je-larp/1.jpg", alt: "LARP hraní rolí - foto 1", aspect: "aspect-3/2" },
-  { src: "/assets/co-je-larp/2.jpg", alt: "LARP hraní rolí - foto 2", aspect: "aspect-3/2" },
-  { src: "/assets/co-je-larp/3.jpg", alt: "LARP hraní rolí - foto 3", aspect: "aspect-3/3" },
-  { src: "/assets/co-je-larp/4.jpg", alt: "LARPový boj - foto 1", aspect: "aspect-3/2" },
-  { src: "/assets/co-je-larp/5.jpg", alt: "LARPový boj - foto 2", aspect: "aspect-[9/16]" },
-  { src: "/assets/co-je-larp/6.jpg", alt: "LARPový boj - foto 3", aspect: "aspect-3/2" },
+  { src: "/assets/co-je-larp/1.webp", alt: "LARP hraní rolí - foto 1", aspect: "aspect-3/2" },
+  { src: "/assets/co-je-larp/2.webp", alt: "LARP hraní rolí - foto 2", aspect: "aspect-3/2" },
+  { src: "/assets/co-je-larp/3.webp", alt: "LARP hraní rolí - foto 3", aspect: "aspect-3/3" },
+  { src: "/assets/co-je-larp/4.webp", alt: "LARPový boj - foto 1", aspect: "aspect-3/2" },
+  { src: "/assets/co-je-larp/5.webp", alt: "LARPový boj - foto 2", aspect: "aspect-[9/16]" },
+  { src: "/assets/co-je-larp/6.webp", alt: "LARPový boj - foto 3", aspect: "aspect-3/2" },
 ];
 
 const larpIntroImages = coJeLarpImages.slice(0, 2);
@@ -34,9 +34,9 @@ document.querySelector("#app").innerHTML = `
           <div class="hero-divider-diamond"></div>
           <div class="hero-divider-line"></div>
         </div>
-        <p class="text-lg sm:text-xl text-text-muted leading-relaxed">
-          LARP Antares je pobytový tábor postavený na principu LARPu. Co LARP znamená?
-        </p>
+          <p class="text-lg sm:text-xl text-text-muted leading-relaxed">
+           LARP Antares je pobytový tábor postavený na principu LARPu. Co LARP znamená?
+         </p>
       </div>
     </section>
 
@@ -57,8 +57,8 @@ document.querySelector("#app").innerHTML = `
           <!-- Text -->
           <div class="flex flex-col gap-4 text-lg text-text-muted leading-relaxed">
             <p>
-              <strong class="text-text">LARP</strong> (z anglického <em>Live Action Role Play</em>) lze přeložit jako
-              <strong class="text-text">hraní rolí naživo</strong>. Účastníci si vytvářejí vlastní postavy,
+              <strong class="text-text">LARP</strong> lze přeložit jako <strong class="text-text">hraní rolí naživo</strong>.
+              Účastníci si vytvářejí vlastní postavy,
               oblékají kostýmy a na týden se stávají rytíři, čaroději, lučištníky či těmi, kteří raději
               řeší hádanky než boje.
             </p>

@@ -4,10 +4,10 @@ import { createFooter } from "./footer.js";
 import { createLightbox, initLightbox } from "./lightbox.js";
 
 const campImages = [
-  { src: "/assets/tento-rocnik/1.jpg", alt: "Tábor Antares - foto 1", span:"md:col-span-3" },
-  { src: "/assets/tento-rocnik/2.jpg", alt: "Tábor Antares - foto 2", span:"md:col-span-3" },
-  { src: "/assets/tento-rocnik/3.jpg", alt: "Tábor Antares - foto 3", span:"md:col-span-3" },
-  { src: "/assets/tento-rocnik/4.jpg", alt: "Tábor Antares - foto 4", span:"md:col-span-3" },
+  { src: "/assets/tento-rocnik/1.webp", alt: "Tábor Antares - foto 1", span:"md:col-span-3" },
+  { src: "/assets/tento-rocnik/2.webp", alt: "Tábor Antares - foto 2", span:"md:col-span-3" },
+  { src: "/assets/tento-rocnik/3.webp", alt: "Tábor Antares - foto 3", span:"md:col-span-3" },
+  { src: "/assets/tento-rocnik/4.webp", alt: "Tábor Antares - foto 4", span:"md:col-span-3" },
 ];
 
 const mapLat = 50.4021514;
