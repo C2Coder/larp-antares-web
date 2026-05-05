@@ -245,15 +245,6 @@ document.querySelector("#app").innerHTML = `
             Více fotek na Facebooku
           </a>
         </div>
-<!--
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-10">
-          ${galleryImages.map((img, i) => `
-            <button type="button" class="gallery-item aspect-4/3 bg-background-dark rounded-xl flex items-center justify-center cursor-pointer overflow-hidden" data-index="${i}" aria-label="Otevřít fotku ${i + 1}">
-              <img src="${img.src}" alt="${img.alt}" class="w-full h-full object-cover rounded-xl" loading="lazy" decoding="async" onerror="this.parentElement.innerHTML='<span class=\\'text-text-muted text-sm p-2 text-center\\'>${img.alt}</span>'">
-            </button>
-          `).join("")}
-        </div>
--->
         <div class="text-center">
           <p class="text-text-muted leading-relaxed mb-2">
             Stále si nejste jistí? Neváhejte se na nás obrátit – rádi poradíme.
@@ -273,4 +264,3 @@ document.querySelector("#app").innerHTML = `
 `;
 
 initNav();
-initLightbox(galleryImages);
