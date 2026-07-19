@@ -18,7 +18,7 @@ export default defineConfig({
             const destPath = join(dest, entry)
             if (statSync(srcPath).isDirectory()) {
               copyDir(srcPath, destPath)
-            } else {
+            } else if (!entry.toLowerCase().endsWith('.jpg') && !entry.toLowerCase().endsWith('.jpeg')) {
               copyFileSync(srcPath, destPath)
             }
           }

@@ -31,7 +31,7 @@ export function createNav(activePage) {
         <!-- Logo -->
         <a href="/" class="relative flex items-center" style="height:64px; padding-left:clamp(80px, 10vw, 108px);">
           <div class="logo-pennant">
-            <img src="/assets/logos/logo-nbg.png" alt="Logo" class="h-20 w-20 md:h-24 md:w-24 object-contain" onerror="this.style.display='none'">
+            <img src="/assets/logos/logo-nbg.webp" alt="Logo" class="h-20 w-20 md:h-24 md:w-24 object-contain" onerror="this.style.display='none'">
           </div>
           <span class="hidden sm:grid ml-2 text-base xl:text-2xl font-bold fc text-header-text">LARP Antares</span>
           <span class="sm:hidden ml-2 text-xl md:text-2xl font-bold fc text-header-text">Antares</span>

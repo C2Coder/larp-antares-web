@@ -177,7 +177,7 @@ document.querySelector("#app").innerHTML = `
                 <div>
                   <h3 class="font-bold text-lg text-text mb-1">Doporučený seznam</h3>
                   <p class="text-text-muted leading-relaxed">
-                    Doporučený seznam věcí <a href="/PDF" class="font-semibold text-button-primary hover:underline">ZDE</a> - Aktualizovaný seznam obdržíte později v emailu. 
+                    Aktualizovaný seznam obdržíte později v emailu. 
                   </p>
                 </div>
               </div>
