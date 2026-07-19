@@ -48,7 +48,7 @@ document.querySelector("#app").innerHTML = `
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <a href="/assets/pdf/kostymy-a-zbrane-2026.pdf" target="_blank" rel="noopener"
+          <a href="/assets/pdf/Kostymy-a-zbrane-LARP-Antares-2026.pdf" target="_blank" rel="noopener"
              class="flex items-center gap-4 bg-background-dark rounded-xl p-5 border border-border hover:border-button-primary transition-colors group">
             <div class="w-12 h-12 bg-primary/30 rounded-lg flex items-center justify-center shrink-0 group-hover:bg-primary/50 transition-colors">
               <svg class="w-6 h-6 text-text" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -61,7 +61,7 @@ document.querySelector("#app").innerHTML = `
             </div>
           </a>
 
-          <a href="/assets/pdf/navod-na-vyrobu-mece-Antares-2026.pdf" target="_blank" rel="noopener"
+          <a href="/assets/pdf/Navod-na-vyrobu-mece-LARP-Antares-2026.pdf" target="_blank" rel="noopener"
              class="flex items-center gap-4 bg-background-dark rounded-xl p-5 border border-border hover:border-button-primary transition-colors group">
             <div class="w-12 h-12 bg-primary/30 rounded-lg flex items-center justify-center shrink-0 group-hover:bg-primary/50 transition-colors">
               <svg class="w-6 h-6 text-text" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -80,9 +80,9 @@ document.querySelector("#app").innerHTML = `
     <!-- Tvorba rolí -->
     <section id="role" class="py-16 bg-background-dark">
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-10">
+        <div class="text-center mb-6">
           <h2 class="fc font-bold text-3xl sm:text-4xl text-text mb-4">Tvorba rolí</h2>
-          <div class="hero-divider mx-auto pt-2 pb-6">
+          <div class="hero-divider mx-auto pt-2">
             <div class="hero-divider-line"></div>
             <div class="hero-divider-diamond"></div>
             <div class="hero-divider-diamond-lg"></div>
@@ -167,7 +167,7 @@ document.querySelector("#app").innerHTML = `
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <p class="fc text-sm sm:text-base text-text-muted tracking-widest uppercase mb-3">Příběh letošního ročníku</p>
         <h2 class="fc font-bold text-3xl sm:text-4xl text-text mb-4">Prolog: Úsvit pod praporem</h2>
-        <div class="hero-divider mx-auto pt-2 pb-8">
+        <div class="hero-divider mx-auto pt-2 pb-6">
           <div class="hero-divider-line"></div>
           <div class="hero-divider-diamond"></div>
           <div class="hero-divider-diamond-lg"></div>
@@ -197,9 +197,9 @@ document.querySelector("#app").innerHTML = `
     <!-- Pravidla a schopnosti -->
     <section id="pravidla" class="py-16 bg-background-dark">
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-10">
+        <div class="text-center mb-8">
           <h2 class="fc font-bold text-3xl sm:text-4xl text-text mb-4">Obecná pravidla a stromy schopností</h2>
-          <div class="hero-divider mx-auto pt-2 pb-6">
+          <div class="hero-divider mx-auto pt-2">
             <div class="hero-divider-line"></div>
             <div class="hero-divider-diamond"></div>
             <div class="hero-divider-diamond-lg"></div>
@@ -208,17 +208,45 @@ document.querySelector("#app").innerHTML = `
           </div>
         </div>
 
-        <div class="bg-background-light rounded-xl p-8 border border-border text-center max-w-2xl mx-auto">
-          <div class="w-14 h-14 bg-primary/30 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-7 h-7 text-text" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-            </svg>
-          </div>
-          <h3 class="fc font-bold text-xl text-text mb-3">Připravujeme</h3>
-          <p class="text-text-muted leading-relaxed">
-            Pravidla a stromy schopností pro letošní ročník právě finalizujeme –
-            brzy zde najdete vše potřebné.
-          </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <a href="/assets/pdf/Pravidla-hry-LARP-Antares-2026.pdf" target="_blank" rel="noopener"
+             class="flex items-center gap-4 bg-background-light rounded-xl p-5 border border-border hover:border-button-primary transition-colors group">
+            <div class="w-12 h-12 bg-primary/30 rounded-lg flex items-center justify-center shrink-0 group-hover:bg-primary/50 transition-colors">
+              <svg class="w-6 h-6 text-text" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+              </svg>
+            </div>
+            <div>
+              <p class="font-bold text-text fc">Pravidla hry</p>
+              <p class="text-sm text-text-muted">PDF – obecná pravidla letošního ročníku</p>
+            </div>
+          </a>
+
+          <a href="/assets/pdf/Stromy-schopnosti-LARP-Antares-2026.pdf" target="_blank" rel="noopener"
+             class="flex items-center gap-4 bg-background-light rounded-xl p-5 border border-border hover:border-button-primary transition-colors group">
+            <div class="w-12 h-12 bg-primary/30 rounded-lg flex items-center justify-center shrink-0 group-hover:bg-primary/50 transition-colors">
+              <svg class="w-6 h-6 text-text" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+              </svg>
+            </div>
+            <div>
+              <p class="font-bold text-text fc">Stromy schopností</p>
+              <p class="text-sm text-text-muted">PDF – schopnosti jednotlivých povolání</p>
+            </div>
+          </a>
+
+          <a href="/assets/pdf/Bojove-efekty-LARP-Antares-2026.pdf" target="_blank" rel="noopener"
+             class="flex items-center gap-4 bg-background-light rounded-xl p-5 border border-border hover:border-button-primary transition-colors group">
+            <div class="w-12 h-12 bg-primary/30 rounded-lg flex items-center justify-center shrink-0 group-hover:bg-primary/50 transition-colors">
+              <svg class="w-6 h-6 text-text" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+              </svg>
+            </div>
+            <div>
+              <p class="font-bold text-text fc">Bojové efekty</p>
+              <p class="text-sm text-text-muted">PDF – pravidla pro boj a efekty</p>
+            </div>
+          </a>
         </div>
       </div>
     </section>
