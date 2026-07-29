@@ -95,7 +95,7 @@
     </section>
 
     <!-- Key facts -->
-    <section id="info-cards" class="py-16 bg-background-dark">
+    <section id="info-cards" class="pt-16 pb-8 bg-background-dark">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
@@ -118,12 +118,14 @@
       </div>
     </section>
 
-    <section id="break" class="bg-background-dark">
+    <!-- flow-root keeps the divider's margins inside the section; without it
+         they collapse through and the gap shows the body background -->
+    <section id="break" class="bg-background-dark flow-root">
       {{> divider }}
     </section>
 
     <!-- About us -->
-    <section id="o-nas-home" class="py-20 bg-background-dark">
+    <section id="o-nas-home" class="pt-6 pb-20 bg-background-dark">
       <div class="mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="text-center fc font-bold text-4xl text-text mb-8">
           O nás
