@@ -1,5 +1,5 @@
 {{!--
-  Horní lišta. `active` je id položky z `nav` v src/site.json.
+  Site header. `active` is the id of an entry in `nav` in src/site.json.
 
   Usage:  {{> nav active="tento-rocnik" }}
 --}}
@@ -16,7 +16,7 @@
         <span class="sm:hidden ml-2 text-xl md:text-2xl font-bold fc text-header-text">Antares</span>
       </a>
 
-      <!-- Odkazy (desktop) -->
+      <!-- Links (desktop) -->
       <div class="hidden md:flex items-center gap-6">
         {{#each nav}}
         <a href="{{href}}"
@@ -25,7 +25,7 @@
         {{/each}}
       </div>
 
-      <!-- Sociální sítě + hamburger -->
+      <!-- Socials + hamburger -->
       <div class="flex items-center gap-1">
         <a href="{{contact.instagram.url}}" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="p-2 text-header-text hover:text-primary transition-colors">
           {{> icons/instagram class="w-5 h-5" }}
@@ -46,7 +46,7 @@
     </div>
   </nav>
 
-  <!-- Rozbalovací menu (mobil) -->
+  <!-- Dropdown menu (mobile) -->
   <div id="mobile-menu" class="hidden md:hidden bg-header/98 backdrop-blur border-t border-header-text/20" aria-label="Mobilní navigace">
     <div class="max-w-7xl mx-auto px-4 pt-10 pb-3 flex flex-col gap-1">
       {{#each nav}}

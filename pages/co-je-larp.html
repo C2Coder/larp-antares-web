@@ -13,7 +13,7 @@
 
   <main class="pt-16">
 
-    <!-- Záhlaví stránky -->
+    <!-- Page header -->
     <section class="py-16 bg-background-dark text-center">
       <div class="flex flex-col max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <p class="fc text-sm sm:text-base text-text-muted tracking-widest uppercase mb-3">Průvodce světem larpu</p>
@@ -25,7 +25,7 @@
       </div>
     </section>
 
-    <!-- Co je LARP -->
+    <!-- What LARP is -->
     <section class="py-16 bg-background-light">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col md:flex-row items-start gap-8">
@@ -51,7 +51,7 @@
         </div>
       </div>
 
-      <!-- Fotky -->
+      <!-- LARP photos -->
       <div class="grid grid-cols-1 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 sm:grid-cols-2 gap-4 w-full mt-8">
         {{#each galleries.larpIntro}}
         {{> photo src=src alt=alt class="aspect-3/2" }}
@@ -59,7 +59,7 @@
       </div>
     </section>
 
-    <!-- Jak to funguje -->
+    <!-- How it works -->
     <section class="py-16 bg-background-dark">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-10">
@@ -107,7 +107,7 @@
       </div>
     </section>
 
-    <!-- LARPový boj -->
+    <!-- LARP combat -->
     <section class="py-16 bg-background-light">
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-10">
@@ -128,7 +128,7 @@
           </p>
         </div>
 
-        <!-- Fotky z boje -->
+        <!-- Fight photos -->
         <div class="grid grid-cols-1 sm:grid-cols-2 grid-rows-3 sm:grid-rows-2 gap-4">
           {{> photo src=galleries.boj.topLeft.src alt=galleries.boj.topLeft.alt imgClass="aspect-3/2" }}
           {{> photo src=galleries.boj.right.src alt=galleries.boj.right.alt class="row-span-2" imgClass="aspect-2/3" }}
@@ -137,7 +137,7 @@
       </div>
     </section>
 
-    <!-- Výzva -->
+    <!-- CTA -->
     <section class="py-16 bg-background-dark text-center">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="fc font-bold text-3xl sm:text-4xl text-text">Chcete se zúčastnit?</h2>

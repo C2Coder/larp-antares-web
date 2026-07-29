@@ -57,8 +57,8 @@ img {
   /* font-family: "IM Fell English SC", serif;*/
 }
 
-/* Fotka v galerii ({{> photo }}). Rámeček, zaoblení i pozadí jsou tady,
-   v HTML se u ní řeší jen rozměry (poměr stran, col-span, …). */
+/* A gallery photo ({{> photo }}). Frame, rounding and background live here;
+   the markup only sets its size (aspect ratio, col-span, ...). */
 .gallery-item {
   display: flex;
   align-items: center;
@@ -113,9 +113,9 @@ img {
   }
 }
 
-/* Oddělovač ({{> divider }}).
-   Odsazení nad i pod je jen tady – v HTML se kolem něj nic nepřidává,
-   aby všechny oddělovače na webu dýchaly stejně. */
+/* The divider ({{> divider }}).
+   The space above and below is set only here - never add spacing around it
+   in the markup, so every divider on the site breathes the same. */
 .divider {
   display: flex;
   align-items: center;

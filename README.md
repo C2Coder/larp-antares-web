@@ -13,7 +13,7 @@ npm run preview   # náhled hotového buildu
 
 | Soubor | K čemu |
 |---|---|
-| `index.html`, `co-je-larp.html`, … | jednotlivé stránky – tady se píše obsah |
+| `pages/*.html` | jednotlivé stránky – tady se píše obsah |
 | `src/site.json` | termíny, cena, kontakty, seznamy fotek |
 | `src/partials/*.hbs` | hlavička, menu, patička, kartičky, oddělovač… |
 | `src/partials/icons/*.hbs` | SVG ikonky |
@@ -50,8 +50,12 @@ npm run preview   # náhled hotového buildu
 </html>
 ```
 
-Nová stránka: založit `neco.html`, přidat `'neco'` do seznamu `pages`
+Nová stránka: založit `pages/neco.html`, přidat `'neco'` do seznamu `pages`
 ve `vite.config.js` a řádek do `sitemap.xml`.
+
+Soubory jsou v `pages/`, ale na webu stránka žije na `/neco` (úvodní na `/`) —
+build je při generování `dist/` přesune do kořene a dev i preview server
+adresy překládají stejně, takže odkazy fungují všude stejně.
 
 ## Partialy
 

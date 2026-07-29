@@ -4,14 +4,14 @@
   Usage (inside <head>, page-specific extras like JSON-LD go after it):
     {{> head
         title="Tento ročník - Antares LARP"
-        description="Krátký popis pro Google a náhledy na sociálních sítích."
+        description="Short blurb for Google and social previews."
         keywords="antares, larp, ..."
         path="/tento-rocnik"
     }}
 
-  `path` je cesta stránky bez domény ("" pro úvodní stránku) – použije se
-  pro canonical i og:url. Zbytek (ikony, fonty, OG obrázek, analytika)
-  je stejný všude a mění se jen zde.
+  `path` is the page path without the domain ("" for the home page); it
+  feeds both canonical and og:url. Everything else - icons, fonts, OG image,
+  analytics - is the same on every page and only changes here.
 --}}
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id={{site.gaId}}"></script>
@@ -62,9 +62,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap&subset=latin,latin-ext" rel="stylesheet">
 
 {{!--
-  Styly se linkují přímo odsud (ne přes import v main.js), aby prohlížeč
-  počkal na CSS ještě před vykreslením – jinak by na okamžik problikla
-  neostylovaná stránka. Vite si při buildu link přepíše na hashovaný soubor.
+  The stylesheet is linked here rather than imported from main.js so the
+  browser blocks on it before the first paint - otherwise the page flashes
+  unstyled. The build rewrites this link to the hashed file.
 --}}
 <link rel="stylesheet" href="/src/style.css">
 

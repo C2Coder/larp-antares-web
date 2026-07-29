@@ -13,7 +13,7 @@
 
   <main class="pt-16">
 
-    <!-- Záhlaví stránky -->
+    <!-- Page header -->
     <section class="py-16 bg-background-dark text-center">
       <div class="flex flex-col max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <p class="fc text-sm sm:text-base text-text-muted tracking-widest uppercase mb-3">Průvodce hráče</p>
@@ -27,7 +27,7 @@
       </div>
     </section>
 
-    <!-- Kostýmy a zbraně -->
+    <!-- Costumes & weapons -->
     <section id="kostym" class="py-16 bg-background-light">
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-10">
@@ -50,7 +50,7 @@
       </div>
     </section>
 
-    <!-- Tvorba rolí -->
+    <!-- Creating a character -->
     <section id="role" class="py-16 bg-background-dark">
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-6">
@@ -79,7 +79,7 @@
           {{> doc-link href=docs.charakternik icon="icons/file"
               title="Charakterník" note="DOCX – formulář k vyplnění" }}
 
-          <!-- Náhrada, dokud není PDF připraven #TODO -->
+          <!-- Placeholder until the PDF is ready #TODO -->
           <div class="flex items-center gap-4 bg-background-light rounded-xl p-5 border border-border opacity-75">
             <div class="w-12 h-12 bg-primary/30 rounded-lg flex items-center justify-center shrink-0">
               {{> icons/file class="w-6 h-6 text-text" }}
@@ -90,7 +90,7 @@
             </div>
           </div>
 
-          <!-- Skrytý, dokud není PDF připraven #TODO (pak smaž hidden=true) -->
+          <!-- Hidden until the PDF is ready #TODO (then drop hidden=true) -->
           {{> doc-link href=docs.ukazkovyCharakternik icon="icons/file" hidden=true
               title="Ukázkový charakterník" note="PDF – příklad hotové role" }}
         </div>
@@ -108,7 +108,7 @@
       </div>
     </section>
 
-    <!-- Prolog -->
+    <!-- Prologue -->
     <section id="prolog" class="py-16 bg-background-light">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <p class="fc text-sm sm:text-base text-text-muted tracking-widest uppercase mb-3">Příběh letošního ročníku</p>
@@ -134,7 +134,7 @@
       </div>
     </section>
 
-    <!-- Pravidla a schopnosti -->
+    <!-- Rules & ability trees -->
     <section id="pravidla" class="py-16 bg-background-dark">
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-8">
@@ -155,7 +155,7 @@
       </div>
     </section>
 
-    <!-- Inspiromat -->
+    <!-- Inspiration -->
     <section id="inspiromat" class="py-16 bg-background-light">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-10">

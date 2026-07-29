@@ -1,13 +1,13 @@
 {{!--
-  Kartička s ikonou, nadpisem a textem. Text se píše dovnitř bloku,
-  takže v něm můžeš normálně používat <strong>, odkazy atd.
+  Card with an icon, a heading and body text. The text goes inside the
+  block, so <strong>, links and so on work as usual.
 
   Usage:
     {{#> info-card icon="icons/doc-text" title="Bezinfekčnost"}}
       Vyplňuje zákonný zástupce <strong class="text-text">v den odjezdu</strong> na tábor.
     {{/info-card}}
 
-  icon – název partialu ze složky partials/icons (bez přípony)
+  icon - name of a partial from partials/icons (without the extension)
 --}}
 <div class="bg-background-light rounded-xl p-6 border border-border">
   <div class="flex items-start gap-4">

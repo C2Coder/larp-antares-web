@@ -1,13 +1,13 @@
 {{!--
-  Dlaždice odkazující na soubor ke stažení (PDF, DOCX, …).
+  Tile linking to a downloadable file (PDF, DOCX, ...).
 
   Usage:
     {{> doc-link href=docs.pravidla icon="icons/file"
         title="Pravidla hry" note="PDF – obecná pravidla letošního ročníku" }}
 
-  bg     – barva pozadí dlaždice (default bg-background-light;
-           na světlé sekci použij bg="bg-background-dark")
-  hidden – true schová dlaždici (pro soubory, které ještě nejsou hotové)
+  bg     - tile background (defaults to bg-background-light; on a light
+           section use bg="bg-background-dark")
+  hidden - true hides the tile (for files that are not ready yet)
 --}}
 <a href="{{href}}" target="_blank" rel="noopener"
    class="flex items-center gap-4 {{#if bg}}{{bg}}{{else}}bg-background-light{{/if}} rounded-xl p-5 border border-border hover:border-button-primary transition-colors group"
