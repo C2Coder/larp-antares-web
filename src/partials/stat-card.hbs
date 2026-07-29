@@ -1,0 +1,13 @@
+{{!--
+  Kartička s ikonou nahoře a textem na střed (úvodní stránka).
+
+  Usage:
+    {{#> stat-card icon="icons/ticket" title="Kolik?"}}
+      3 920 Kč
+    {{/stat-card}}
+--}}
+<div class="bg-background-light rounded-xl p-6 border border-border text-center">
+  {{> (lookup . "icon") class="w-8 h-8 text-button-primary mx-auto mb-2" }}
+  <h3 class="fc font-bold text-xl text-text mb-2">{{title}}</h3>
+  <p class="text-text-muted">{{> @partial-block }}</p>
+</div>

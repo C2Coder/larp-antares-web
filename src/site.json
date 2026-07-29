@@ -1,0 +1,97 @@
+{
+  "site": {
+    "name": "Antares LARP",
+    "url": "https://larp-antares.cz",
+    "author": "C2Coder",
+    "locale": "cs_CZ",
+    "themeColor": "#FFDD86",
+    "ogImage": "https://larp-antares.cz/assets/logos/logo.webp",
+    "gaId": "G-9V1SQVDQ35"
+  },
+
+  "camp": {
+    "edition": "XI. ročník",
+    "editionNumber": "11",
+    "storyTitle": "Úsvit pod praporem",
+    "dates": "23. 8. – 29. 8. 2026",
+    "startDate": "2026-08-23",
+    "endDate": "2026-08-29",
+    "place": "Sebuč u Chvalkovic",
+    "placeNote": "(okres Náchod)",
+    "ageRange": "10–20 let",
+    "price": "3 920 Kč",
+    "priceValue": "3920",
+    "currency": "CZK",
+    "registrationUrl": "https://www.duha2d.cz/t%C3%A1bory/larp",
+    "roleDeadline": "30. 6. 2026",
+    "healthCertDeadline": "konce července",
+    "map": {
+      "lat": "50.4021514",
+      "lng": "15.9677469"
+    }
+  },
+
+  "contact": {
+    "leaderName": "Jan \"Jedi\" Nápravník",
+    "leaderEmail": "ja.napravnik@seznam.cz",
+    "email": "larpantarescz@gmail.com",
+    "phone": "+420 735 857 336",
+    "phoneHref": "+420735857336",
+    "instagram": {
+      "handle": "@larpantares",
+      "url": "https://instagram.com/larpantares/"
+    },
+    "facebook": {
+      "handle": "@AntaresLARP",
+      "url": "https://www.facebook.com/AntaresLARP"
+    }
+  },
+
+  "organizers": {
+    "duha": { "name": "DUHA 2D", "url": "https://www.duha2d.cz/domovsk%C3%A1-str%C3%A1nka" },
+    "khk": { "name": "Královéhradecký kraj", "url": "https://www.khk.cz/" },
+    "msmt": { "name": "Ministerstva školství, mládeže a tělovýchovy", "url": "https://msmt.gov.cz/" }
+  },
+
+  "docs": {
+    "kostymy": "/assets/pdf/Kostymy-a-zbrane-LARP-Antares-2026.pdf",
+    "mec": "/assets/pdf/Navod-na-vyrobu-mece-LARP-Antares-2026.pdf",
+    "pravidla": "/assets/pdf/Pravidla-hry-LARP-Antares-2026.pdf",
+    "stromy": "/assets/pdf/Stromy-schopnosti-LARP-Antares-2026.pdf",
+    "bojoveEfekty": "/assets/pdf/Bojove-efekty-LARP-Antares-2026.pdf",
+    "charakternik": "/assets/doc/charakternik-k-vyplneni.docx",
+    "ukazkovyCharakternik": "/assets/pdf/ukazkovy-charakternik.pdf"
+  },
+
+  "nav": [
+    { "id": "uvod", "href": "/", "label": "Úvod" },
+    { "id": "co-je-larp", "href": "/co-je-larp", "label": "Co je LARP" },
+    { "id": "tento-rocnik", "href": "/tento-rocnik", "label": "Tento ročník" },
+    { "id": "jak-na-larp", "href": "/jak-na-larp", "label": "Jak na LARP" },
+    { "id": "o-nas", "href": "/o-nas", "label": "Kontakt" }
+  ],
+
+  "galleries": {
+    "home": [
+      { "src": "/assets/home/1.webp", "alt": "Tábor Antares 1" },
+      { "src": "/assets/home/2.webp", "alt": "Tábor Antares 2" },
+      { "src": "/assets/home/3.webp", "alt": "Tábor Antares 3" }
+    ],
+    "camp": [
+      { "src": "/assets/tento-rocnik/1.webp", "alt": "Tábor Antares - foto 1" },
+      { "src": "/assets/tento-rocnik/2.webp", "alt": "Tábor Antares - foto 2" },
+      { "src": "/assets/tento-rocnik/3.webp", "alt": "Tábor Antares - foto 3" },
+      { "src": "/assets/tento-rocnik/4.webp", "alt": "Tábor Antares - foto 4" }
+    ],
+    "larpIntro": [
+      { "src": "/assets/co-je-larp/1.webp", "alt": "LARP hraní rolí - foto 1" },
+      { "src": "/assets/co-je-larp/2.webp", "alt": "LARP hraní rolí - foto 2" }
+    ],
+    "larpExample": { "src": "/assets/co-je-larp/3.webp", "alt": "LARP hraní rolí - foto 3" },
+    "boj": {
+      "topLeft": { "src": "/assets/co-je-larp/4.webp", "alt": "LARPový boj - foto 1" },
+      "right": { "src": "/assets/co-je-larp/5.webp", "alt": "LARPový boj - foto 2" },
+      "bottomLeft": { "src": "/assets/co-je-larp/6.webp", "alt": "LARPový boj - foto 3" }
+    }
+  }
+}

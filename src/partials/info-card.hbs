@@ -1,0 +1,22 @@
+{{!--
+  Kartička s ikonou, nadpisem a textem. Text se píše dovnitř bloku,
+  takže v něm můžeš normálně používat <strong>, odkazy atd.
+
+  Usage:
+    {{#> info-card icon="icons/doc-text" title="Bezinfekčnost"}}
+      Vyplňuje zákonný zástupce <strong class="text-text">v den odjezdu</strong> na tábor.
+    {{/info-card}}
+
+  icon – název partialu ze složky partials/icons (bez přípony)
+--}}
+<div class="bg-background-light rounded-xl p-6 border border-border">
+  <div class="flex items-start gap-4">
+    <div class="w-10 h-10 bg-primary/30 rounded-lg flex items-center justify-center shrink-0">
+      {{> (lookup . "icon") class="w-5 h-5 text-text" }}
+    </div>
+    <div>
+      <h3 class="font-bold text-lg text-text mb-1">{{title}}</h3>
+      <p class="text-text-muted leading-relaxed">{{> @partial-block }}</p>
+    </div>
+  </div>
+</div>

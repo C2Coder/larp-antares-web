@@ -1,0 +1,20 @@
+{{!--
+  Kontaktní karta (stránka Kontakty). Uvnitř se hodí {{> field }}.
+
+  Usage:
+    {{#> contact-card icon="icons/mail" title="Napište nám"}}
+      {{#> field label="E-mail"}}<a href="...">...</a>{{/field}}
+    {{/contact-card}}
+--}}
+<div class="bg-background-dark rounded-2xl border border-border p-6 flex flex-col gap-4">
+  <div class="flex items-center gap-3 mb-1">
+    <div class="w-10 h-10 bg-primary/30 rounded-lg flex items-center justify-center shrink-0">
+      {{> (lookup . "icon") class="w-5 h-5 text-text" }}
+    </div>
+    <h2 class="fc font-bold text-xl text-text">{{title}}</h2>
+  </div>
+
+  <div class="flex flex-col gap-3">
+    {{> @partial-block }}
+  </div>
+</div>

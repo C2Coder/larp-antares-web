@@ -1,0 +1,12 @@
+{{!--
+  Řádek „popisek + hodnota“ uvnitř {{> contact-card }}.
+
+  Usage:
+    {{#> field label="Telefon"}}
+      <a href="tel:+420735857336" class="font-semibold text-text hover:underline">+420 735 857 336</a>
+    {{/field}}
+--}}
+<div>
+  <p class="text-sm text-text-muted uppercase tracking-widest mb-0.5">{{label}}</p>
+  {{> @partial-block }}
+</div>

@@ -1,95 +1,65 @@
 /**
- * Shared lightbox module.
+ * Gallery lightbox.
  *
- * Usage:
- *   import { createLightbox, initLightbox } from "./lightbox.js";
- *
- *   // 1. Include the HTML in your page template:
- *   document.querySelector("#app").innerHTML = `
- *     ...
- *     ${createLightbox()}
- *   `;
- *
- *   // 2. After rendering, bind it to your image array:
- *   initLightbox(images);   // images: Array<{ src: string, alt: string }>
+ * The image list comes from the DOM - every .gallery-item on the page, in
+ * markup order. Adding a photo therefore means dropping in another
+ * {{> photo }}; no indices are maintained anywhere.
  */
+export function initLightbox() {
+  const lightbox = document.getElementById("lightbox");
+  const items = [...document.querySelectorAll(".gallery-item")];
+  if (!lightbox || items.length === 0) return;
 
-export function createLightbox() {
-  return `
-  <div id="lightbox" class="fixed inset-0 z-100 bg-black/95 hidden items-center justify-center" role="dialog" aria-modal="true" aria-label="Galerie obrázků">
-    <button id="lightbox-close" aria-label="Zavřít galerii" class="absolute top-4 right-4 p-2 text-white/70 hover:text-white transition-colors z-10">
-      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-    </button>
-    <button id="lightbox-prev" aria-label="Předchozí obrázek" class="absolute left-4 top-1/2 -translate-y-1/2 p-2 text-white/70 hover:text-white transition-colors z-10">
-      <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
-    </button>
-    <button id="lightbox-next" aria-label="Další obrázek" class="absolute right-4 top-1/2 -translate-y-1/2 p-2 text-white/70 hover:text-white transition-colors z-10">
-      <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-    </button>
-    <img id="lightbox-image" src="" alt="" class="max-w-[90vw] max-h-[90vh] object-contain" decoding="async">
-  </div>
-`;
-}
+  const image = document.getElementById("lightbox-image");
+  const closeButton = document.getElementById("lightbox-close");
 
-/**
- * Initialise lightbox interactions.
- * @param {Array<{src: string, alt: string}>} images
- */
-export function initLightbox(images) {
+  // Snapshot taken up front, so a photo that fails to load and gets
+  // replaced by its caption cannot shift the order.
+  const photos = items.map((item) => {
+    const img = item.querySelector("img");
+    return { src: img?.src ?? "", alt: img?.alt ?? "" };
+  });
+
   let currentIndex = 0;
 
-  function openLightbox(index) {
-    currentIndex = index;
-    const lightbox = document.getElementById("lightbox");
-    const img = document.getElementById("lightbox-image");
-    const closeButton = document.getElementById("lightbox-close");
-    img.src = images[index].src;
-    img.alt = images[index].alt;
+  function show(index) {
+    currentIndex = (index + photos.length) % photos.length;
+    image.src = photos[currentIndex].src;
+    image.alt = photos[currentIndex].alt;
+  }
+
+  function open(index) {
+    show(index);
     lightbox.classList.remove("hidden");
     lightbox.classList.add("flex");
     document.body.style.overflow = "hidden";
     closeButton?.focus();
   }
 
-  function closeLightbox() {
-    const lightbox = document.getElementById("lightbox");
+  function close() {
     lightbox.classList.add("hidden");
     lightbox.classList.remove("flex");
     document.body.style.overflow = "";
   }
 
-  function showImage(index) {
-    currentIndex = (index + images.length) % images.length;
-    const img = document.getElementById("lightbox-image");
-    img.src = images[currentIndex].src;
-    img.alt = images[currentIndex].alt;
-  }
+  document.addEventListener("click", (event) => {
+    const item = event.target.closest(".gallery-item");
+    if (item) {
+      const index = items.indexOf(item);
+      if (index !== -1) open(index);
+      return;
+    }
 
-  document.addEventListener("click", (e) => {
-    if (e.target.closest(".gallery-item")) {
-      const index = parseInt(e.target.closest(".gallery-item").dataset.index);
-      openLightbox(index);
-    }
-    if (
-      e.target.closest("#lightbox-close") ||
-      e.target.id === "lightbox"
-    ) {
-      closeLightbox();
-    }
-    if (e.target.closest("#lightbox-prev")) {
-      showImage(currentIndex - 1);
-    }
-    if (e.target.closest("#lightbox-next")) {
-      showImage(currentIndex + 1);
-    }
+    if (event.target.closest("#lightbox-close") || event.target === lightbox) close();
+    if (event.target.closest("#lightbox-prev")) show(currentIndex - 1);
+    if (event.target.closest("#lightbox-next")) show(currentIndex + 1);
   });
 
-  document.addEventListener("keydown", (e) => {
-    const lightbox = document.getElementById("lightbox");
+  document.addEventListener("keydown", (event) => {
     if (lightbox.classList.contains("hidden")) return;
 
-    if (e.key === "Escape") closeLightbox();
-    if (e.key === "ArrowLeft") showImage(currentIndex - 1);
-    if (e.key === "ArrowRight") showImage(currentIndex + 1);
+    if (event.key === "Escape") close();
+    if (event.key === "ArrowLeft") show(currentIndex - 1);
+    if (event.key === "ArrowRight") show(currentIndex + 1);
   });
 }

@@ -1,49 +1,164 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9V1SQVDQ35"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-  
-    gtag('config', 'G-9V1SQVDQ35');
-  </script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Tento ročník - Antares LARP</title>
-  <meta name="description" content="Tento ročník pobytového larp tábora Antares - termín, místo, ubytování a příjezdové informace.">
-  <meta name="keywords" content="antares, larp, letní tábor, tento ročník, Sebuč, Chvalkovice, Náchod, tábor pro mládež, tábory, královehradecký kraj, česká skalice, ceska skalice, českoskalicko, fantasy tábor, larp tábor">
-  <meta name="author" content="C2Coder">
-  <link rel="canonical" href="https://larp-antares.cz/tento-rocnik">
-  
-  <link rel="icon" type="image/png" href="/assets/logos/logo-nbg.png">
-  <link rel="apple-touch-icon" href="/assets/logos/logo-nbg.png">
-  
-  <meta property="og:title" content="Tento ročník - Antares LARP">
-  <meta property="og:description" content="Tento ročník pobytového larp tábora Antares - termín, místo, ubytování a příjezdové informace.">
-  <meta property="og:image" content="https://larp-antares.cz/assets/logos/logo.webp">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://larp-antares.cz/tento-rocnik.html">
-  <meta property="og:site_name" content="Antares LARP">
-  <meta property="og:locale" content="cs_CZ">
-  
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Tento ročník - Antares LARP">
-  <meta name="twitter:description" content="Tento ročník pobytového larp tábora Antares - termín, místo, ubytování a příjezdové informace.">
-  <meta name="twitter:image" content="https://larp-antares.cz/assets/logos/logo.webp">
-  
-  <meta name="theme-color" content="#FFDD86">
-  <meta name="robots" content="index, follow">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap&subset=latin,latin-ext" rel="stylesheet">
+  {{> head
+      title="Tento ročník - Antares LARP"
+      description="Tento ročník pobytového larp tábora Antares - termín, místo, ubytování a příjezdové informace."
+      keywords="antares, larp, letní tábor, tento ročník, Sebuč, Chvalkovice, Náchod, tábor pro mládež, tábory, královehradecký kraj, česká skalice, ceska skalice, českoskalicko, fantasy tábor, larp tábor"
+      path="/tento-rocnik"
+  }}
 </head>
 <body>
-  <div id="app"></div>
-  <script type="module" src="/src/tento-rocnik.js"></script>
+  {{> nav active="tento-rocnik" }}
+
+  <main class="pt-16">
+
+    <!-- Záhlaví stránky -->
+    <section class="py-16 bg-background-dark text-center">
+      <div class="flex flex-col max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p class="fc text-sm sm:text-base text-text-muted tracking-widest uppercase mb-3">{{camp.edition}}</p>
+        <h1 class="fc text-4xl sm:text-5xl lg:text-6xl font-bold text-text">Tento ročník</h1>
+        {{> divider }}
+        <p class="text-lg sm:text-xl text-text-muted leading-relaxed">
+          {{camp.editionNumber}}. ročník tábora se bude konat <strong class="text-text">{{camp.dates}}</strong>, na táborové základně Sebuč
+          u obce Chvalkovice {{camp.placeNote}}. Tábor je určen pro dobrodruhy (účastníky) ve věku
+          <strong class="text-text">{{camp.ageRange}}</strong>.
+          Rádi mezi sebou přivítáme i nováčky, kteří nemají s larpem předchozí zkušenost.
+        </p>
+      </div>
+    </section>
+
+    <!-- Poloha a ubytování -->
+    <section class="py-16 bg-background-light">
+      <div class="mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="fc font-bold text-3xl sm:text-4xl text-text">Poloha, ubytování, vybavení</h2>
+        {{> divider }}
+
+        <div class="flex flex-col xl:flex-row justify-center">
+          <div class="max-w-4xl flex flex-col gap-4 text-lg text-text-muted leading-relaxed">
+            <p>
+              Táborová základna Sebuč je umístěna na klidné louce s blízkým lesem, mezi obcemi
+              <strong class="text-text">Chvalkovice</strong> a <strong class="text-text">Dolany</strong>.
+              Vedle tábořiště protéká potok Běluňka s možností koupání.
+            </p>
+            <p>
+              Součástí tábořiště je také pevná budova s kuchyní a jídelnou a samostatná koupelna se sprchami.
+              Účastníci budou ubytováni ve <strong class="text-text">stanech s podsadou</strong>.
+            </p>
+            <p>
+              Strava je zajištěna <strong class="text-text">5× denně</strong> a pitný režim po celý den.
+            </p>
+
+            {{> divider }}
+
+            <div>
+              <p class="text-2xl font-bold mb-2">
+                Příjezd na tábor
+              </p>
+              <p>
+                Příjezd účastníků je po <strong>vlastní ose</strong>, čas a bližší informace k místu předání <strong>obdržíte e-mailem</strong>.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex-1 max-w-4xl mt-4 md:mt-0 px-4 sm:px-6 lg:px-8">
+            <div class="rounded-2xl overflow-hidden border border-border shadow-lg h-[420px]">
+              <iframe
+                src="https://frame.mapy.cz/turisticka?x={{camp.map.lng}}&y={{camp.map.lat}}&z=15&source=coor&id={{camp.map.lng}}%2C{{camp.map.lat}}"
+                width="100%"
+                height="100%"
+                frameborder="0"
+                allowfullscreen
+                title="Mapa tábořiště Sebuč"
+                loading="lazy"
+              ></iframe>
+            </div>
+            <p class="text-center text-sm text-text-muted mt-3">
+              Tábořiště Sebuč &mdash;
+              <a href="https://mapy.cz/turisticka?x={{camp.map.lng}}&y={{camp.map.lat}}&z=15&source=coor&id={{camp.map.lng}}%2C{{camp.map.lat}}" target="_blank" rel="noopener" class="underline hover:text-text transition-colors">
+                Otevřít na Mapy.com
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Co s sebou -->
+    <section class="py-16 bg-background-dark">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="fc font-bold text-3xl sm:text-4xl text-text">Co s sebou na tábor</h2>
+        {{> divider }}
+        <p class="text-lg text-text-muted mb-8">Bližší informace obdržíte v <strong>e-mailu</strong>.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+          <!-- Doklady -->
+          <div class="grid grid-cols-1 gap-4 text-left">
+            {{#> info-card icon="icons/doc-text" title="Posudek zdravotní způsobilosti"}}
+              Vyžadován pro účastníky mladší 18 let (postačí kopie).
+              Prosíme o zaslání dokumentu předem - <strong class="text-text">nejpozději do {{camp.healthCertDeadline}}</strong>.
+            {{/info-card}}
+
+            {{#> info-card icon="icons/doc-text" title="Bezinfekčnost"}}
+              Vyplňuje zákonný zástupce <strong class="text-text">v den odjezdu</strong> na tábor.
+            {{/info-card}}
+
+            {{#> info-card icon="icons/card" title="Kartička zdravotní pojišťovny"}}
+              Přiložte kopii průkazu zdravotní pojišťovny účastníka.
+            {{/info-card}}
+          </div>
+
+          <!-- Výbava -->
+          <div class="grid grid-cols-1 gap-4 text-left">
+            {{#> info-card icon="icons/doc-text" title="Doporučený seznam"}}
+              Aktualizovaný seznam obdržíte později v emailu.
+            {{/info-card}}
+
+            {{#> info-card icon="icons/doc-text" title="Kostým a měkčené zbraně"}}
+              Nezbytná součást pro hru, více najdete <a href="/jak-na-larp#kostym" class="font-semibold text-button-primary hover:underline">ZDE</a>
+            {{/info-card}}
+
+            {{#> info-card icon="icons/card" title="Role"}}
+              Více o vytváření rolí najdete <a href="/jak-na-larp#role" class="font-semibold text-button-primary hover:underline">ZDE</a>
+            {{/info-card}}
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Registrace -->
+    <section class="py-16 bg-background-light text-center">
+      <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="fc font-bold text-3xl sm:text-4xl text-text">Registrace</h2>
+        {{> divider }}
+        <p class="text-lg text-text-muted leading-relaxed mb-8">
+          Registrace probíhá přes stránky <strong class="text-text">Duha 2D</strong>.
+        </p>
+        <a href="{{camp.registrationUrl}}" target="_blank" rel="noopener"
+           class="inline-block px-10 py-4 bg-button-primary text-button-text rounded-lg hover:bg-button-primary-hover transition-colors font-semibold text-lg fc">
+          Přihlásit se na tábor
+        </a>
+      </div>
+    </section>
+
+    <!-- Fotky tábořiště -->
+    <section class="py-16 bg-background-dark">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="fc font-bold text-3xl sm:text-4xl text-center text-text">Fotky tábořiště</h2>
+        {{> divider }}
+
+        <div class="grid grid-cols-1 md:grid-cols-6 gap-4 mb-4">
+          {{#each galleries.camp}}
+          {{> photo src=src alt=alt class="aspect-video md:col-span-3" }}
+          {{/each}}
+        </div>
+      </div>
+    </section>
+  </main>
+
+  {{> footer }}
+  {{> lightbox }}
 </body>
 </html>

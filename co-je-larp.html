@@ -1,49 +1,166 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9V1SQVDQ35"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-  
-    gtag('config', 'G-9V1SQVDQ35');
-  </script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Co je to LARP - Antares</title>
-  <meta name="description" content="Co je to LARP? Pobytový tábor Antares ukazuje hraní rolí naživo, fantasy příběh, kostýmy a larpový boj.">
-  <meta name="keywords" content="antares, larp, co je larp, pobytový tábor, fantasy tábor, larpový boj, role, kostým, tábory, královehradecký kraj, česká skalice, ceska skalice, českoskalicko, dobrodružství, fantasy svět">
-  <meta name="author" content="C2Coder">
-  <link rel="canonical" href="https://larp-antares.cz/co-je-larp">
-  
-  <link rel="icon" type="image/png" href="/assets/logos/logo-nbg.png">
-  <link rel="apple-touch-icon" href="/assets/logos/logo-nbg.png">
-  
-  <meta property="og:title" content="Co je to LARP - Antares">
-  <meta property="og:description" content="Co je to LARP? Pobytový tábor Antares ukazuje hraní rolí naživo, fantasy příběh, kostýmy a larpový boj.">
-  <meta property="og:image" content="https://larp-antares.cz/assets/logos/logo.webp">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://larp-antares.cz/co-je-larp.html">
-  <meta property="og:site_name" content="Antares LARP">
-  <meta property="og:locale" content="cs_CZ">
-  
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Co je to LARP - Antares">
-  <meta name="twitter:description" content="Co je to LARP? Pobytový tábor Antares ukazuje hraní rolí naživo, fantasy příběh, kostýmy a larpový boj.">
-  <meta name="twitter:image" content="https://larp-antares.cz/assets/logos/logo.webp">
-  
-  <meta name="theme-color" content="#FFDD86">
-  <meta name="robots" content="index, follow">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap&subset=latin,latin-ext" rel="stylesheet">
+  {{> head
+      title="Co je to LARP - Antares"
+      description="Co je to LARP? Pobytový tábor Antares ukazuje hraní rolí naživo, fantasy příběh, kostýmy a larpový boj."
+      keywords="antares, larp, co je larp, pobytový tábor, fantasy tábor, larpový boj, role, kostým, tábory, královehradecký kraj, česká skalice, ceska skalice, českoskalicko, dobrodružství, fantasy svět"
+      path="/co-je-larp"
+  }}
 </head>
 <body>
-  <div id="app"></div>
-  <script type="module" src="/src/co-je-larp.js"></script>
+  {{> nav active="co-je-larp" }}
+
+  <main class="pt-16">
+
+    <!-- Záhlaví stránky -->
+    <section class="py-16 bg-background-dark text-center">
+      <div class="flex flex-col max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p class="fc text-sm sm:text-base text-text-muted tracking-widest uppercase mb-3">Průvodce světem larpu</p>
+        <h1 class="fc text-4xl sm:text-5xl lg:text-6xl font-bold text-text">Co je to LARP?</h1>
+        {{> divider }}
+        <p class="text-lg sm:text-xl text-text-muted leading-relaxed">
+          LARP Antares je pobytový tábor postavený na principu LARPu. Co LARP znamená?
+        </p>
+      </div>
+    </section>
+
+    <!-- Co je LARP -->
+    <section class="py-16 bg-background-light">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row items-start gap-8">
+
+          <div class="shrink-0 mx-auto md:mx-0">
+            <div class="w-20 h-20 bg-primary/30 rounded-2xl flex items-center justify-center">
+              {{> icons/bulb class="w-10 h-10 text-text" }}
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-4 text-lg text-text-muted leading-relaxed">
+            <p>
+              <strong class="text-text">LARP</strong> lze přeložit jako <strong class="text-text">hraní rolí naživo</strong>.
+              Účastníci si vytvářejí vlastní postavy,
+              oblékají kostýmy a na týden se stávají rytíři, čaroději, lučištníky či těmi, kteří raději
+              řeší hádanky než boje.
+            </p>
+            <p>
+              Na rozdíl od počítačových her se hráči postavami skutečně <strong class="text-text">stávají</strong> –
+              je to dobrodružné skloubení hry, divadla, fantazie a improvizace.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fotky -->
+      <div class="grid grid-cols-1 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 sm:grid-cols-2 gap-4 w-full mt-8">
+        {{#each galleries.larpIntro}}
+        {{> photo src=src alt=alt class="aspect-3/2" }}
+        {{/each}}
+      </div>
+    </section>
+
+    <!-- Jak to funguje -->
+    <section class="py-16 bg-background-dark">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10">
+          <h2 class="fc font-bold text-3xl sm:text-4xl text-text">Jak to funguje?</h2>
+          {{> divider }}
+        </div>
+
+        <div class="flex flex-col gap-5 text-lg text-text-muted leading-relaxed mb-10">
+          <p>
+            Organizátoři vytvářejí propracovaný příběh, do kterého se hráči přenášejí.
+            Hráči za své postavy rozhodují a jednají – a každé rozhodnutí může ovlivnit průběh celého příběhu.
+          </p>
+          <p>
+            Každý hráč má svou vlastní postavu s jedinečnými
+            <strong class="text-text">schopnostmi, dovednostmi, cíli i příběhem</strong>.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-5 max-w-5xl xl:flex-row gap-4 mx-auto p-4 sm:px-6">
+        <div class="col-span-3 bg-background-light rounded-2xl border border-border p-6 md:p-8">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-8 h-8 bg-primary/30 rounded-lg flex items-center justify-center shrink-0">
+              {{> icons/book class="w-4 h-4 text-text" }}
+            </div>
+            <p class="fc font-bold text-text">Příklad ze hry</p>
+          </div>
+          <div class="flex flex-col gap-3 text-text-muted leading-relaxed">
+            <p>
+              Ve vesnici se ztratil člověk. Hráči se ho vydají hledat – stopy vedou do lesa.
+              V dáli uslyší hlasitý smích a šustění v křoví.
+            </p>
+            <p>
+              Lovec – jeden z hráčů – se rozhodne to prozkoumat, proplíží se blíže a uvidí skupinu
+              banditů a ke stromu přivázaného vesničana.
+            </p>
+            <p class="font-semibold text-text">
+              Co hráči udělají? Pokusí se vyjednávat, bandity odlákají, nebo zavelí k útoku?
+              Rozhodnutí je jen na nich.
+            </p>
+          </div>
+        </div>
+
+        {{> photo src=galleries.larpExample.src alt=galleries.larpExample.alt class="col-span-2" }}
+      </div>
+    </section>
+
+    <!-- LARPový boj -->
+    <section class="py-16 bg-background-light">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10">
+          <h2 class="fc font-bold text-3xl sm:text-4xl text-text">A co larpový boj?</h2>
+          {{> divider }}
+        </div>
+
+        <div class="flex flex-col gap-4 text-lg text-text-muted leading-relaxed mb-10 max-w-4xl px-4 sm:px-6 lg:px-8 mx-auto">
+          <p>
+            Součástí našeho larpu je i boj. Hráči (i organizátoři) používají
+            <strong class="text-text">měkčené zbraně</strong> speciálně vyrobené pro larp
+            (<a href="/jak-na-larp" class="font-semibold text-button-primary hover:underline">více ZDE</a>).
+            Na táboře se účastníci naučí základy larpového šermu a pravidla bezpečného boje.
+          </p>
+          <p>
+            Boj je ale jen <strong class="text-text">jednou ze součástí hry</strong> – stejně důležité jsou
+            vyjednávání, pátrání, řešení hádanek nebo prostě jen prožívání příběhu své postavy.
+          </p>
+        </div>
+
+        <!-- Fotky z boje -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 grid-rows-3 sm:grid-rows-2 gap-4">
+          {{> photo src=galleries.boj.topLeft.src alt=galleries.boj.topLeft.alt imgClass="aspect-3/2" }}
+          {{> photo src=galleries.boj.right.src alt=galleries.boj.right.alt class="row-span-2" imgClass="aspect-2/3" }}
+          {{> photo src=galleries.boj.bottomLeft.src alt=galleries.boj.bottomLeft.alt imgClass="aspect-3/2" }}
+        </div>
+      </div>
+    </section>
+
+    <!-- Výzva -->
+    <section class="py-16 bg-background-dark text-center">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="fc font-bold text-3xl sm:text-4xl text-text">Chcete se zúčastnit?</h2>
+        {{> divider }}
+        <p class="text-lg text-text-muted leading-relaxed mb-8">
+          Podívejte se, co budete na tábor potřebovat – kostýmy, zbraně i vlastní roli.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/jak-na-larp"
+             class="px-10 py-4 bg-button-primary text-button-text rounded-lg hover:bg-button-primary-hover transition-colors font-semibold text-lg fc">
+            Jak na LARP
+          </a>
+          <a href="/tento-rocnik"
+             class="px-10 py-4 bg-button-primary text-button-text rounded-lg hover:bg-button-primary-hover transition-colors font-semibold text-lg fc">
+            Tento ročník
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  {{> footer }}
+  {{> lightbox }}
 </body>
 </html>

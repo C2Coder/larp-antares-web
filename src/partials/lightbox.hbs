@@ -1,0 +1,18 @@
+{{!--
+  Prohlížeč fotek. Vlož ho na stránku, která obsahuje nějaké {{> photo }} –
+  seznam obrázků si posbírá sám z DOMu, nic se nikam nepředává.
+
+  Usage:  {{> lightbox }}
+--}}
+<div id="lightbox" class="fixed inset-0 z-100 bg-black/95 hidden items-center justify-center" role="dialog" aria-modal="true" aria-label="Galerie obrázků">
+  <button id="lightbox-close" aria-label="Zavřít galerii" class="absolute top-4 right-4 p-2 text-white/70 hover:text-white transition-colors z-10">
+    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+  </button>
+  <button id="lightbox-prev" aria-label="Předchozí obrázek" class="absolute left-4 top-1/2 -translate-y-1/2 p-2 text-white/70 hover:text-white transition-colors z-10">
+    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+  </button>
+  <button id="lightbox-next" aria-label="Další obrázek" class="absolute right-4 top-1/2 -translate-y-1/2 p-2 text-white/70 hover:text-white transition-colors z-10">
+    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+  </button>
+  <img id="lightbox-image" src="" alt="" class="max-w-[90vw] max-h-[90vh] object-contain" decoding="async">
+</div>

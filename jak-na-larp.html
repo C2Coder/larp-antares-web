@@ -1,49 +1,189 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9V1SQVDQ35"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-  
-    gtag('config', 'G-9V1SQVDQ35');
-  </script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Jak na LARP - Antares</title>
-  <meta name="description" content="Vše, co potřebujete vědět pro účast na pobytovém larp táboře Antares – kostýmy, zbraně, tvorba role a pravidla hry.">
-  <meta name="keywords" content="antares, larp, jak na larp, kostým, zbraně, role, charakterník, pravidla, fantasy tábor, tábory, královehradecký kraj, česká skalice, ceska skalice, českoskalicko, měkčené zbraně, larpové kostýmy">
-  <meta name="author" content="C2Coder">
-  <link rel="canonical" href="https://larp-antares.cz/jak-na-larp">
-  
-  <link rel="icon" type="image/png" href="/assets/logos/logo-nbg.png">
-  <link rel="apple-touch-icon" href="/assets/logos/logo-nbg.png">
-  
-  <meta property="og:title" content="Jak na LARP - Antares">
-  <meta property="og:description" content="Vše co potřebujete vědět pro účast na pobytovém larp táboře Antares – kostýmy, zbraně, tvorba role a pravidla hry.">
-  <meta property="og:image" content="https://larp-antares.cz/assets/logos/logo.webp">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://larp-antares.cz/jak-na-larp.html">
-  <meta property="og:site_name" content="Antares LARP">
-  <meta property="og:locale" content="cs_CZ">
-  
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Jak na LARP - Antares">
-  <meta name="twitter:description" content="Vše co potřebujete vědět pro účast na pobytovém larp táboře Antares – kostýmy, zbraně, tvorba role a pravidla hry.">
-  <meta name="twitter:image" content="https://larp-antares.cz/assets/logos/logo.webp">
-  
-  <meta name="theme-color" content="#FFDD86">
-  <meta name="robots" content="index, follow">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap&subset=latin,latin-ext" rel="stylesheet">
+  {{> head
+      title="Jak na LARP - Antares"
+      description="Vše, co potřebujete vědět pro účast na pobytovém larp táboře Antares – kostýmy, zbraně, tvorba role a pravidla hry."
+      keywords="antares, larp, jak na larp, kostým, zbraně, role, charakterník, pravidla, fantasy tábor, tábory, královehradecký kraj, česká skalice, ceska skalice, českoskalicko, měkčené zbraně, larpové kostýmy"
+      path="/jak-na-larp"
+  }}
 </head>
 <body>
-  <div id="app"></div>
-  <script type="module" src="/src/jak-na-larp.js"></script>
+  {{> nav active="jak-na-larp" }}
+
+  <main class="pt-16">
+
+    <!-- Záhlaví stránky -->
+    <section class="py-16 bg-background-dark text-center">
+      <div class="flex flex-col max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p class="fc text-sm sm:text-base text-text-muted tracking-widest uppercase mb-3">Průvodce hráče</p>
+        <h1 class="fc text-4xl sm:text-5xl lg:text-6xl font-bold text-text">Jak na LARP</h1>
+        {{> divider }}
+        <p class="text-lg sm:text-xl text-text-muted leading-relaxed">
+          Co je to larp už víte – pokud ne, podívejte se na sekci
+          <a href="/co-je-larp" class="font-semibold text-button-primary hover:underline">Co je to larp</a>.
+          Teď se podíváme na to, co na něj budete potřebovat.
+        </p>
+      </div>
+    </section>
+
+    <!-- Kostýmy a zbraně -->
+    <section id="kostym" class="py-16 bg-background-light">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10">
+          <h2 class="fc font-bold text-3xl sm:text-4xl text-text">Kostýmy a zbraně</h2>
+          {{> divider }}
+          <p class="text-lg text-text-muted leading-relaxed max-w-4xl mx-auto">
+            Bez tematického kostýmu a larpové zbraně se žádný dobrodruh neobejde.
+            Jak je sehnat, jak by měly vypadat a čeho se vyvarovat?
+            (Nejen) pro nováčky jsme připravili manuály plné tipů a návodů.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {{> doc-link href=docs.kostymy icon="icons/file" bg="bg-background-dark"
+              title="Kostýmový a zbraňový manuál" note="PDF – tipy na kostýmy a zbraně" }}
+
+          {{> doc-link href=docs.mec icon="icons/file" bg="bg-background-dark"
+              title="Návod na meč" note="PDF – výroba krok za krokem" }}
+        </div>
+      </div>
+    </section>
+
+    <!-- Tvorba rolí -->
+    <section id="role" class="py-16 bg-background-dark">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-6">
+          <h2 class="fc font-bold text-3xl sm:text-4xl text-text">Tvorba rolí</h2>
+          {{> divider }}
+        </div>
+
+        <div class="flex flex-col gap-6 max-w-4xl px-4 sm:px-6 lg:px-8 mx-auto text-lg text-text-muted leading-relaxed mb-10">
+          <p>
+            Na táboře se účastníci stanou někým jiným – dobrodruhem, hrdinou či kýmkoliv, kým chtějí.
+            Každá postava má své povolání, schopnosti i rasu (člověk, elf, trpaslík,&nbsp;…),
+            jedinečný charakter i příběh.
+          </p>
+          <p>
+            Roli si účastníci tvoří již před táborem pomocí přiloženého <strong class="text-text">Charakterníku</strong>.
+            Organizátoři ji pak doladí tak, aby zapadla do letošního příběhu.
+          </p>
+          <p>
+            Nevíš si rady? Nevadí. Můžeš poslat hotovou roli, jen její kostru, nebo třeba jen jednu větu –
+            <em>"chci být elfí lučištník"</em> – i to nám stačí. Zbytek doplníme za tebe.
+            Inspiraci najdeš v ukázkovém charakterníku.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-5xl mx-auto mb-10">
+          {{> doc-link href=docs.charakternik icon="icons/file"
+              title="Charakterník" note="DOCX – formulář k vyplnění" }}
+
+          <!-- Náhrada, dokud není PDF připraven #TODO -->
+          <div class="flex items-center gap-4 bg-background-light rounded-xl p-5 border border-border opacity-75">
+            <div class="w-12 h-12 bg-primary/30 rounded-lg flex items-center justify-center shrink-0">
+              {{> icons/file class="w-6 h-6 text-text" }}
+            </div>
+            <div>
+              <p class="font-bold text-text fc">Ukázkový charakterník</p>
+              <p class="text-sm text-text-muted">Pracujeme na tom...</p>
+            </div>
+          </div>
+
+          <!-- Skrytý, dokud není PDF připraven #TODO (pak smaž hidden=true) -->
+          {{> doc-link href=docs.ukazkovyCharakternik icon="icons/file" hidden=true
+              title="Ukázkový charakterník" note="PDF – příklad hotové role" }}
+        </div>
+
+        <div class="bg-background-light rounded-xl p-6 border border-border max-w-5xl mx-auto text-center">
+          <p class="text-text-muted leading-relaxed mb-2">
+            Role posílejte na e-mail
+            <a href="mailto:{{contact.leaderEmail}}" class="font-semibold text-button-primary hover:underline">{{contact.leaderEmail}}</a>
+            do <strong class="text-text">{{camp.roleDeadline}}</strong>.
+          </p>
+          <p class="text-sm text-text-muted">
+            Preferujeme přímou komunikaci s účastníkem, lze ovšem komunikovat tyto role přes zákonného zástupce účastníka.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Prolog -->
+    <section id="prolog" class="py-16 bg-background-light">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="fc text-sm sm:text-base text-text-muted tracking-widest uppercase mb-3">Příběh letošního ročníku</p>
+        <h2 class="fc font-bold text-3xl sm:text-4xl text-text">Prolog: {{camp.storyTitle}}</h2>
+        {{> divider }}
+
+        <div class="flex flex-col gap-5 text-lg text-text-muted leading-relaxed italic max-w-2xl mx-auto">
+          <p>
+            Strach se šíří krajem a místní se připravují na nejhorší.
+          </p>
+          <p>
+            Poslední možností je vydat se do hlubin lesa.
+            Měl jsi se mu vyhýbat, teď do něj ale musíš vstoupit.
+            Les je plný magie, nadpřirozena a bytostí.
+          </p>
+          <p>
+            Porozumíš jeho tajemstvím a nalezneš v něm pomoc?
+          </p>
+          <p class="font-semibold not-italic text-text">
+            Spojíš síly s ostatními a postavíš se hrozbě?
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pravidla a schopnosti -->
+    <section id="pravidla" class="py-16 bg-background-dark">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-8">
+          <h2 class="fc font-bold text-3xl sm:text-4xl text-text">Obecná pravidla a stromy schopností</h2>
+          {{> divider }}
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {{> doc-link href=docs.pravidla icon="icons/file"
+              title="Pravidla hry" note="PDF – obecná pravidla letošního ročníku" }}
+
+          {{> doc-link href=docs.stromy icon="icons/file"
+              title="Stromy schopností" note="PDF – schopnosti jednotlivých povolání" }}
+
+          {{> doc-link href=docs.bojoveEfekty icon="icons/file"
+              title="Bojové efekty" note="PDF – pravidla pro boj a efekty" }}
+        </div>
+      </div>
+    </section>
+
+    <!-- Inspiromat -->
+    <section id="inspiromat" class="py-16 bg-background-light">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10">
+          <h2 class="fc font-bold text-3xl sm:text-4xl text-text">Inspiromat</h2>
+          {{> divider }}
+          <p class="text-lg text-text-muted leading-relaxed max-w-2xl mx-auto mb-4">
+            Hledáte inspiraci na kostým nebo nevíte, jaké povolání vybrat?
+            Mrkněte na fotky z minulých ročníků.
+          </p>
+          <a href="{{contact.facebook.url}}" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center gap-2 text-button-primary font-semibold hover:underline">
+            {{> icons/facebook class="w-5 h-5" }}
+            Více fotek na Facebooku
+          </a>
+        </div>
+        <div class="text-center">
+          <p class="text-text-muted leading-relaxed mb-2">
+            Stále si nejste jistí? Neváhejte se na nás obrátit – rádi poradíme.
+          </p>
+          <a href="mailto:{{contact.leaderEmail}}" class="font-semibold text-button-primary hover:underline">
+            {{contact.leaderEmail}}
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  {{> footer }}
 </body>
 </html>

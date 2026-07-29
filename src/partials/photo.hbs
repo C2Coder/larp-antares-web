@@ -1,0 +1,13 @@
+{{!--
+  Jedna fotka v galerii – kliknutím se otevře v prohlížeči ({{> lightbox }}).
+  Pořadí ve „slideshow“ = pořadí v HTML, žádné indexy se nikde nenastavují.
+
+  Usage:  {{> photo src="/assets/home/1.webp" alt="Tábor Antares 1" class="aspect-3/2" }}
+          {{#each galleries.home}}{{> photo src=src alt=alt class="aspect-3/2"}}{{/each}}
+
+  class    – třídy pro tlačítko (poměr stran, col-span, …)
+  imgClass – třídy navíc pro samotný <img>
+--}}
+<button type="button" class="gallery-item {{class}}" aria-label="Otevřít fotku – {{alt}}">
+  <img src="{{src}}" alt="{{alt}}" class="w-full h-full object-cover {{imgClass}}" loading="lazy" decoding="async">
+</button>

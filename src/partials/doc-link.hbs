@@ -1,0 +1,22 @@
+{{!--
+  Dlaždice odkazující na soubor ke stažení (PDF, DOCX, …).
+
+  Usage:
+    {{> doc-link href=docs.pravidla icon="icons/file"
+        title="Pravidla hry" note="PDF – obecná pravidla letošního ročníku" }}
+
+  bg     – barva pozadí dlaždice (default bg-background-light;
+           na světlé sekci použij bg="bg-background-dark")
+  hidden – true schová dlaždici (pro soubory, které ještě nejsou hotové)
+--}}
+<a href="{{href}}" target="_blank" rel="noopener"
+   class="flex items-center gap-4 {{#if bg}}{{bg}}{{else}}bg-background-light{{/if}} rounded-xl p-5 border border-border hover:border-button-primary transition-colors group"
+   {{#if hidden}}style="display: none;"{{/if}}>
+  <div class="w-12 h-12 bg-primary/30 rounded-lg flex items-center justify-center shrink-0 group-hover:bg-primary/50 transition-colors">
+    {{> (lookup . "icon") class="w-6 h-6 text-text" }}
+  </div>
+  <div>
+    <p class="font-bold text-text fc">{{title}}</p>
+    <p class="text-sm text-text-muted">{{note}}</p>
+  </div>
+</a>

@@ -1,0 +1,59 @@
+{{!--
+  Horní lišta. `active` je id položky z `nav` v src/site.json.
+
+  Usage:  {{> nav active="tento-rocnik" }}
+--}}
+<header class="fixed top-0 left-0 right-0 z-50 bg-header/95 backdrop-blur shadow-sm overflow-visible">
+  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+
+      <!-- Logo -->
+      <a href="/" class="relative flex items-center h-16 pl-[clamp(80px,10vw,108px)]">
+        <div class="logo-pennant">
+          <img src="/assets/logos/logo-nbg.webp" alt="Logo" class="h-20 w-20 md:h-24 md:w-24 object-contain">
+        </div>
+        <span class="hidden sm:grid ml-2 text-base xl:text-2xl font-bold fc text-header-text">LARP Antares</span>
+        <span class="sm:hidden ml-2 text-xl md:text-2xl font-bold fc text-header-text">Antares</span>
+      </a>
+
+      <!-- Odkazy (desktop) -->
+      <div class="hidden md:flex items-center gap-6">
+        {{#each nav}}
+        <a href="{{href}}"
+           {{#if (eq id ../active)}}aria-current="page"{{/if}}
+           class="text-header-text hover:text-primary-dark text-sm xl:text-base fc font-semibold transition-colors {{#if (eq id ../active)}}border-b-2 border-primary-dark text-primary-dark{{/if}}">{{label}}</a>
+        {{/each}}
+      </div>
+
+      <!-- Sociální sítě + hamburger -->
+      <div class="flex items-center gap-1">
+        <a href="{{contact.instagram.url}}" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="p-2 text-header-text hover:text-primary transition-colors">
+          {{> icons/instagram class="w-5 h-5" }}
+        </a>
+        <a href="{{contact.facebook.url}}" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="p-2 text-header-text hover:text-primary transition-colors">
+          {{> icons/facebook class="w-5 h-5" }}
+        </a>
+
+        <button id="hamburger" class="md:hidden p-2 text-header-text hover:text-primary-dark transition-colors" aria-label="Otevřít menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+          <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Rozbalovací menu (mobil) -->
+  <div id="mobile-menu" class="hidden md:hidden bg-header/98 backdrop-blur border-t border-header-text/20" aria-label="Mobilní navigace">
+    <div class="max-w-7xl mx-auto px-4 pt-10 pb-3 flex flex-col gap-1">
+      {{#each nav}}
+      <a href="{{href}}"
+         class="block py-2 text-header-text hover:text-primary-dark fc font-semibold transition-colors {{#if (eq id ../active)}}text-primary-dark border-l-2 border-primary-dark pl-3{{else}}pl-4{{/if}}"
+         data-mobile-link>{{label}}</a>
+      {{/each}}
+    </div>
+  </div>
+</header>
